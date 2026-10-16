@@ -9,14 +9,15 @@ Repositório de contexto do projeto **Central do Fluxo Comercial N&G** no progra
 
 ## Por onde começar
 
-1. [`CLAUDE.md`](CLAUDE.md): contexto e regras para o agente.
-2. [`01_projeto/visao-do-projeto.md`](01_projeto/visao-do-projeto.md): objetivo e as 5 fases.
-3. [`04_fase-atual/fase.md`](04_fase-atual/fase.md): a fase atual, com as tasks.
-4. [`03_documentos/prompts-tronco-fase-1.md`](03_documentos/prompts-tronco-fase-1.md): os 10 prompts do tronco para enviar no Skip.
+1. [`01_projeto/escopo-definitivo.md`](01_projeto/escopo-definitivo.md): escopo completo do projeto (5 fases).
+2. [`CLAUDE.md`](CLAUDE.md): contexto e regras para o agente.
+3. [`01_projeto/visao-do-projeto.md`](01_projeto/visao-do-projeto.md): objetivo e as 5 fases.
+4. [`04_fase-atual/fase.md`](04_fase-atual/fase.md): a fase atual, com as tasks.
+5. [`03_documentos/prompts-tronco-fase-1.md`](03_documentos/prompts-tronco-fase-1.md): os 10 prompts do tronco para enviar no Skip.
 
 ## Estrutura
 
-- `01_projeto/`: objetivo, visão, constituição, regras e permissões, decisões
+- `01_projeto/`: escopo definitivo, objetivo, visão, constituição, regras e permissões, decisões
 - `02_reunioes/`: índice e atas
 - `03_documentos/`: prompts do tronco e fluxos piloto
 - `04_fase-atual/`: fase em execução (SPECs e tasks)

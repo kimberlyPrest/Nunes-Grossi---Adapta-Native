@@ -24,7 +24,7 @@ Detalhes em `01_projeto/objetivo.md` e `01_projeto/visao-do-projeto.md`.
 
 | Pasta/arquivo | Conteúdo |
 |---|---|
-| `01_projeto/` | Objetivo, visão das 5 fases, constituição (regras permanentes), regras e permissões, decisões pendentes |
+| `01_projeto/` | Escopo definitivo completo (`escopo-definitivo.md`), objetivo, visão das 5 fases, constituição (regras permanentes), regras e permissões, decisões pendentes |
 | `02_reunioes/` | Índice e atas das reuniões |
 | `03_documentos/` | Prompts do tronco (Skip) e fluxos piloto da fase atual |
 | `04_fase-atual/fase.md` | **A fase em execução**: resultado, telas, regras, testes de aceite e a tabela de Tasks |
