@@ -4,6 +4,7 @@
 
 - Transcrição da 2ª consultoria em `02_reunioes/2026-10-16-2a-consultoria/`.
 - Supabase criado e conectado ao Skip; Prompts 1 e 2 do tronco enviados.
+- A auditoria do tronco (SPEC-1-001) passa a ser conduzida pela Louise no Maestro, sem revisão da consultora.
 
 ## 2026-10-16 — Liberação da Fase 1
 

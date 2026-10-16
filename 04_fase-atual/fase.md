@@ -162,7 +162,7 @@ Legenda de status: ☐ a fazer · ◐ em andamento · ☑ concluída · ⛔ bloq
 
 | ID | Task | Dono | SPEC | Critério | Recorte da prova | Prazo | Status |
 |---|---|---|---|---|---|---|---|
-| T0.00 | Passo 0: conectar o Supabase ao projeto | Louise + Kimberly | SPEC-1-001 | Supabase conectado | Configurações do Skip | 20/10 | ☐ |
+| T0.00 | Passo 0: conectar o Supabase ao projeto | Louise | SPEC-1-001 | Supabase conectado | Configurações do Skip | 20/10 | ☐ |
 | T0.01 | Prompt 1: login, estrutura e navegação | Louise | SPEC-1-001 | Conferência P1 | — | 20/10 | ☐ |
 | T0.02 | Prompt 2: usuários, perfis, equipes e funções | Louise | SPEC-1-001 | Conferência P2 | — | 20/10 | ☐ |
 | T0.03 | Prompt 3: clientes e contatos | Louise | SPEC-1-001 | Conferência P3 | — | 21/10 | ☐ |
@@ -178,7 +178,7 @@ Legenda de status: ☐ a fazer · ◐ em andamento · ☑ concluída · ⛔ bloq
 
 | ID | Task | Dono | SPEC | Critério | Recorte da prova | Prazo | Status |
 |---|---|---|---|---|---|---|---|
-| T1.01 | Auditar o tronco e escrever `docs/mapa-do-tronco.md` (sem alterar nada) | Maestro (com Kimberly) | SPEC-1-001 | CA-1-04 | RED + consultas de conferência | 23/10 | ☐ |
+| T1.01 | Auditar o tronco e escrever `docs/mapa-do-tronco.md` (sem alterar nada) | Maestro (conduzido pela Louise) | SPEC-1-001 | CA-1-04 | RED + consultas de conferência | 23/10 | ☐ |
 | T1.02 | Corrigir as lacunas estruturais e atualizar o mapa | Maestro | SPEC-1-001 | CA-1-01, 02, 03 | GREEN + REGRESSÃO | 23/10 | ☐ |
 | T4.00 | Revisar J6 (Isabelle) e J3 (Sheyla) em Configurações → Fluxos | Isabelle, Sheyla | SPEC-1-004 | Anotações entregues | — | 23/10 | ☐ |
 

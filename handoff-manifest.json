@@ -5,11 +5,11 @@
     "adapta": "0.7.0",
     "adaptaCliente": "0.7.0"
   },
-  "generatedAt": "2026-10-16T20:00:09.744Z",
+  "generatedAt": "2026-10-16T21:13:49.740Z",
   "files": [
     {
       "path": "04_fase-atual/fase.md",
-      "sha256": "95b5730a44b802c74df97234b44dd2a526e9cf270c7bfdb103d491458193cd0e",
+      "sha256": "ee23e2dfe097534ee293d9cc81d0b56ef347fa5abc9e4fdbaef041ffdfb6bda0",
       "classification": "fase-atual"
     },
     {
@@ -19,7 +19,7 @@
     },
     {
       "path": "04_fase-atual/specs/SPEC-1-001-tronco-auditado.md",
-      "sha256": "bb3c2f16eaa219b2d64de26251705ffcd664f63a74e1f8e746fb536ecf718ebb",
+      "sha256": "4067a6642db58bbb93c9b570a4b5a0298e324d6d2c21a109887930f97fd073ea",
       "classification": "spec-fase-atual"
     },
     {

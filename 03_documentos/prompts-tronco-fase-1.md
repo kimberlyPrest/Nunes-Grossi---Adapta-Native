@@ -396,7 +396,7 @@ com o que foi feito nos testes → exportar CSV baixa um arquivo.
    Configurações → Fluxos.
 2. Passe para as SPECs: abra o Maestro com o link do repositório de contexto e peça
    **“execute a próxima task”**. A primeira task (T1.01) é a **auditoria do tronco**: o Maestro confere
-   o que o Skip criou e prepara o mapa para os galhos. Ela será feita junto com a Kimberly.
+   o que o Skip criou e prepara o mapa para os galhos. A Louise conduz essa task sozinha no Maestro.
 
 ## Observações do tronco (preencher durante o envio)
 

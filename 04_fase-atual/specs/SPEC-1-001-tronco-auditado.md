@@ -2,7 +2,7 @@
 
 **Fase:** 1 — Primeira jornada viva
 **Status:** planejada
-**Dono:** Louise (prompts e testes) · Maestro (auditoria e correções) · Kimberly (revisão do mapa)
+**Dono:** Louise (prompts, condução da auditoria no Maestro e testes) · Maestro (auditoria e correções)
 **Origem:** `04_fase-atual/fase.md` (sequência de construção, itens 1 a 6) e `01_projeto/constituicao.md`
 **Degrau da solução:** nativo da plataforma: o Skip gera telas e banco a partir dos prompts do tronco; o Maestro só confere e completa o que faltou
 
@@ -26,7 +26,7 @@ SPECs seguintes usam.
   GitHub; projeto Supabase criado na conta da N&G, região São Paulo; plugin dos 7 agentes instalado no Maestro.
 - **Saídas/artefatos:** sistema com o tronco; `docs/mapa-do-tronco.md`; tabela “Observações do tronco”
   preenchida no arquivo de prompts.
-- **Dependências e responsáveis:** Louise envia os prompts; a Kimberly acompanha o Passo 0 e a T1.01.
+- **Dependências e responsáveis:** Louise envia os prompts e conduz a auditoria (T1.01 e T1.02) sozinha no Maestro.
 - **Risco e plano B:** o Skip gerar nomes ou estruturas diferentes do esperado. **Plano B:** o mapa
   registra os nomes reais e as SPECs seguintes passam a usá-los. Só se renomeia o que estiver
   realmente errado (ex.: a mesma informação em duas tabelas).
@@ -72,14 +72,14 @@ Dados iniciais esperados: 2 equipes; 8 seguradoras; 14 produtos; 8 origens; 9 mo
 3. O Maestro escreve `docs/mapa-do-tronco.md` com: telas e rotas existentes; tabelas reais com colunas,
    tipos e ligações; dados iniciais encontrados; e uma lista de **lacunas** classificadas em
    *estrutural* (corrigir agora), *regra/segurança* (SPEC indicada) e *visual* (SPEC indicada).
-4. A Kimberly revisa as lacunas estruturais.
+4. A Louise lê a lista de lacunas que o Maestro entregou e confirma as estruturais (as de regra/segurança e visuais ficam para as SPECs indicadas).
 5. O Maestro (T1.02) corrige só as lacunas estruturais, por migração, e atualiza o mapa.
 
 | Cenário | Dado/condição | Resultado esperado | Caminho de erro/recuperação |
 |---|---|---|---|
 | Principal | Tronco gerado conforme os prompts | Mapa sem lacunas estruturais, ou com lacunas corrigidas na T1.02 | — |
-| Limite | Skip juntou duas gavetas numa só (ex.: etapas do modelo e da oportunidade na mesma tabela) | Lacuna estrutural registrada; separar só se impedir a regra de cópia (Prompt 7, item 3) | Kimberly decide antes da T1.02 |
-| Falha | Banco criado no lugar errado (nativo do Skip em vez do Supabase) | Auditoria para e avisa | Kimberly orienta a migração antes de seguir |
+| Limite | Skip juntou duas gavetas numa só (ex.: etapas do modelo e da oportunidade na mesma tabela) | Lacuna estrutural registrada; separar só se impedir a regra de cópia (Prompt 7, item 3) | O Maestro aplica essa regra na T1.02 e registra a decisão no mapa |
+| Falha | Banco criado no lugar errado (nativo do Skip em vez do Supabase) | Auditoria para, registra em `06_notas/debug/` e não segue | Louise reconecta o Supabase no Skip e o Maestro refaz a T1.01 |
 
 ## Checklist de execução
 
@@ -87,7 +87,7 @@ Dados iniciais esperados: 2 equipes; 8 seguradoras; 14 produtos; 8 origens; 9 mo
 - [ ] Prompts 1 a 10 enviados, cada um com a conferência rápida feita.
 - [ ] Observações do tronco registradas no arquivo de prompts.
 - [ ] `docs/mapa-do-tronco.md` criado no repositório de código.
-- [ ] Lacunas estruturais revisadas pela Kimberly.
+- [ ] Lacunas estruturais confirmadas pela Louise.
 - [ ] Lacunas estruturais corrigidas e mapa atualizado.
 
 ## Critérios de aceite
@@ -115,7 +115,7 @@ lista de tabelas e colunas do esquema público; lista de pastas de arquivos.
 
 | ID | Task | Dono | SPEC | Checklist/aceite | Recorte da prova | Status |
 |---|---|---|---|---|---|---|
-| T0.00 | Passo 0 — conectar o Supabase ao projeto Skip | Louise + Kimberly | SPEC-1-001 | Checklist item 1 | Supabase aparece conectado nas configurações do Skip | ☐ |
+| T0.00 | Passo 0 — conectar o Supabase ao projeto Skip | Louise | SPEC-1-001 | Checklist item 1 | Supabase aparece conectado nas configurações do Skip | ☐ |
 | T0.01 | Prompt 1 — Estrutura e navegação | Louise | SPEC-1-001 | Conferência rápida P1 | — | ☐ |
 | T0.02 | Prompt 2 — Usuários, perfis, equipes e funções | Louise | SPEC-1-001 | Conferência rápida P2 | — | ☐ |
 | T0.03 | Prompt 3 — Clientes e contatos | Louise | SPEC-1-001 | Conferência rápida P3 | — | ☐ |
@@ -126,7 +126,7 @@ lista de tabelas e colunas do esquema público; lista de pastas de arquivos.
 | T0.08 | Prompt 8 — Ficha da oportunidade | Louise | SPEC-1-001 | Conferência rápida P8 | — | ☐ |
 | T0.09 | Prompt 9 — Movimento | Louise | SPEC-1-001 | Conferência rápida P9 | — | ☐ |
 | T0.10 | Prompt 10 — Visões e painel | Louise | SPEC-1-001 | Conferência rápida P10 | — | ☐ |
-| T1.01 | Auditar o tronco e escrever o mapa (sem alterar nada) | Maestro (com Kimberly) | SPEC-1-001 | CA-1-04 (mapa e lacunas) | RED + GREEN parcial: consultas de conferência registradas | ☐ |
+| T1.01 | Auditar o tronco e escrever o mapa (sem alterar nada) | Maestro (conduzido pela Louise) | SPEC-1-001 | CA-1-04 (mapa e lacunas) | RED + GREEN parcial: consultas de conferência registradas | ☐ |
 | T1.02 | Corrigir as lacunas estruturais e atualizar o mapa | Maestro | SPEC-1-001 | CA-1-01, CA-1-02, CA-1-03 | GREEN + REGRESSÃO | ☐ |
 
 ## Emendas
