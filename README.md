@@ -1,24 +1,27 @@
 # Corretora de Seguros Nunes & Grossi — Adapta Native
 
-Repositório de contexto do projeto Nunes & Grossi no programa Adapta Native.
+Repositório de contexto do projeto **Central do Fluxo Comercial N&G** no programa Adapta Native.
 
 ## Estado atual
 
-- **Etapa no pipeline (HubSpot):** 1ª reunião realizada (entrada em 05/10/2026)
-- **Consultora:** Kimberly Prestes (Adapta)
+- **Fase em execução:** Fase 1 — Primeira jornada viva (20/10 a 30/10/2026)
+- **Champion:** Viviane Grossi · **Executora:** Louise Faraguti · **Consultora:** Kimberly Prestes (Adapta)
 
-## Reuniões registradas
+## Por onde começar
 
-Veja o [índice de reuniões](02_reunioes/00-indice-reunioes.md).
+1. [`CLAUDE.md`](CLAUDE.md): contexto e regras para o agente.
+2. [`01_projeto/visao-do-projeto.md`](01_projeto/visao-do-projeto.md): objetivo e as 5 fases.
+3. [`04_fase-atual/fase.md`](04_fase-atual/fase.md): a fase atual, com as tasks.
+4. [`03_documentos/prompts-tronco-fase-1.md`](03_documentos/prompts-tronco-fase-1.md): os 10 prompts do tronco para enviar no Skip.
 
-## Estrutura (a popular conforme o projeto avança)
+## Estrutura
 
-- `01_projeto/` — escopo e documentos do projeto
-- `02_reunioes/` — atas, decisões e pendências
-- `03_documentos/` — documentos operacionais liberados
-- `04_fase-atual/` — fase em execução (SPECs e tasks)
-- `05_entregas/` — entregas concluídas e evidências
-- `06_notas/` — notas de trabalho
+- `01_projeto/`: objetivo, visão, constituição, regras e permissões, decisões
+- `02_reunioes/`: índice e atas
+- `03_documentos/`: prompts do tronco e fluxos piloto
+- `04_fase-atual/`: fase em execução (SPECs e tasks)
+- `05_entregas/`: entregas concluídas e evidências
+- `06_notas/`: notas de trabalho e `debug/`
 
 ## Regras do projeto
 

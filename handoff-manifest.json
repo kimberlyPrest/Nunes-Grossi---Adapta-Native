@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "adapta-cliente-handoff/v1",
+  "phase": 1,
+  "versions": {
+    "adapta": "0.7.0",
+    "adaptaCliente": "0.7.0"
+  },
+  "generatedAt": "2026-10-16T20:00:09.744Z",
+  "files": [
+    {
+      "path": "04_fase-atual/fase.md",
+      "sha256": "95b5730a44b802c74df97234b44dd2a526e9cf270c7bfdb103d491458193cd0e",
+      "classification": "fase-atual"
+    },
+    {
+      "path": "04_fase-atual/specs/00-INDICE.md",
+      "sha256": "c1863fdb51b8c42554f1965d1598d1707c0e722aaba6a10b5352d8595eb0fadc",
+      "classification": "spec-fase-atual"
+    },
+    {
+      "path": "04_fase-atual/specs/SPEC-1-001-tronco-auditado.md",
+      "sha256": "bb3c2f16eaa219b2d64de26251705ffcd664f63a74e1f8e746fb536ecf718ebb",
+      "classification": "spec-fase-atual"
+    },
+    {
+      "path": "04_fase-atual/specs/SPEC-1-002-acesso-e-seguranca.md",
+      "sha256": "56abf6790e8137a5acde4c82f49569c9de11b851817b6663976d6d1a0a4998eb",
+      "classification": "spec-fase-atual"
+    },
+    {
+      "path": "04_fase-atual/specs/SPEC-1-003-clientes.md",
+      "sha256": "ee1948351b5df0f768bdd40b2b52ac50dcc1903e67d392e5295a17150408929a",
+      "classification": "spec-fase-atual"
+    },
+    {
+      "path": "04_fase-atual/specs/SPEC-1-004-fluxos-e-abertura.md",
+      "sha256": "cf5912f15e4a0a81c73697a68012d60d30f6b850071f3223dcb1dd3271006609",
+      "classification": "spec-fase-atual"
+    },
+    {
+      "path": "04_fase-atual/specs/SPEC-1-005-execucao-do-fluxo.md",
+      "sha256": "e5f2a240fe32009ad5891c446b4d0df7b2cdd3038759615d87f31edaf8cfda58",
+      "classification": "spec-fase-atual"
+    },
+    {
+      "path": "04_fase-atual/specs/SPEC-1-006-visoes-e-painel.md",
+      "sha256": "7c10114216748e7431b737f076c3f046c8a87ad1a15ed9f5911e0c5550b01148",
+      "classification": "spec-fase-atual"
+    },
+    {
+      "path": "04_fase-atual/specs/SPEC-1-007-ensaio-real-e-aceite.md",
+      "sha256": "ef42406d3c8b9689616b597285fe959d8d8c62ab19f5f459c8bd2400c631b9d7",
+      "classification": "spec-fase-atual"
+    }
+  ]
+}
