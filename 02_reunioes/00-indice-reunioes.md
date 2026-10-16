@@ -7,3 +7,4 @@
 | 16/09/2026 | ENC: Kickoff \| Adapta IA e N&G | — | https://tldv.io/app/meetings/6aaad1f1223a0a0014633558 |
 | 01/10/2026 | Projeto Adapta N&G \| escopo e dúvidas | — | https://tldv.io/app/meetings/6abe917f5b633c0013f4b2af |
 | 05/10/2026 | Adapta Native: 1ª Consultoria <> Corretora de Seguros Nunes & Grossi | [ata](2026-10-05-1a-consultoria/ata.md) | https://tldv.io/app/meetings/6ac4019ca5977800130faa6a |
+| 16/10/2026 | 2ª Consultoria — Supabase, Prompts 1 e 2, segurança | [transcrição](2026-10-16-2a-consultoria/transcricao.md) | — |

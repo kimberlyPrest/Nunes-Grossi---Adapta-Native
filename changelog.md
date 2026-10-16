@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-16 — 2ª Consultoria
+
+- Transcrição da 2ª consultoria em `02_reunioes/2026-10-16-2a-consultoria/`.
+- Supabase criado e conectado ao Skip; Prompts 1 e 2 do tronco enviados.
+
 ## 2026-10-16 — Liberação da Fase 1
 
 - Escopo definitivo completo (`01_projeto/escopo-definitivo.md`), objetivo, visão das 5 fases, constituição, regras e permissões e decisões em `01_projeto/`.
