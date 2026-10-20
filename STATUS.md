@@ -10,7 +10,7 @@
 
 ## Próximos passos
 
-1. T1.02: corrigir as 6 lacunas estruturais da auditoria e criar o `docs/mapa-do-tronco.md` no repositório de código.
+1. T1.02: ajustes estruturais aplicados e conferidos no código; mapa em `03_documentos/mapa-do-tronco.md`. Falta a Louise fazer a conferência rápida nas telas para marcar ☑.
 2. Seguir para as SPECs dos galhos (SPEC-1-002 em diante) com "execute a próxima task".
 3. Revisão dos fluxos J6 e J3 (Isabelle e Sheyla) depois das visões, até 29/10 (T4.00).
 4. Viviane responder D-01, D-03 e D-12 (`01_projeto/decisoes.md`).

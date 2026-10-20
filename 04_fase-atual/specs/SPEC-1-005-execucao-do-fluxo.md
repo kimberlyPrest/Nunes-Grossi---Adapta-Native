@@ -98,3 +98,4 @@ avança, perda sempre tem motivo e tudo fica registrado na linha do tempo.
 |---|---|---|---|
 | 20/10/2026 | Auditoria do tronco | CA-1-20 | A etapa 10 da J6 passou para o responsável comercial (ajuste da N&G); a passagem para a fila do pós-venda é testada na etapa 12 |
 | 20/10/2026 | Auditoria do tronco | T5.03, CA-1-22 | O tronco não grava data do ganho nem data da perda (só na linha do tempo); a SPEC-1-006 usa essas datas no Painel |
+| 20/10/2026 | Verificação da T1.02 | T5.01 | Item Documento obrigatório só conta como preenchido com ao menos um arquivo em `oportunidades_documentos`; hoje marcar o item como concluído também libera |

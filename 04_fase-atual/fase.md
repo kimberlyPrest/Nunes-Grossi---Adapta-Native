@@ -133,8 +133,8 @@ Quando a Louise disser **“execute a próxima task”**:
 1. Leia este arquivo e pegue a **primeira task com status ☐ cujo dono é “Maestro”** e cujas tasks
    anteriores da mesma leva estejam ☑. Tasks de outros donos (Louise, Isabelle, Sheyla, Viviane) são
    feitas por pessoas: se a próxima for de uma pessoa, avise quem precisa fazer o quê e pare.
-2. Leia a SPEC da task **inteira**, esta página (resultado, telas e regras acima), `01_projeto/regras-e-permissoes.md` e o `docs/mapa-do-tronco.md` no
-   repositório de código. **O mapa é a verdade sobre nomes de telas, tabelas e campos.** Não suponha
+2. Leia a SPEC da task **inteira**, esta página (resultado, telas e regras acima), `01_projeto/regras-e-permissoes.md` e o `03_documentos/mapa-do-tronco.md`
+   (neste repositório). **O mapa é a verdade sobre nomes de telas, tabelas e campos.** Não suponha
    nomes; o Skip criou o banco junto com as telas durante o tronco.
 3. Antes de mudar qualquer coisa, **confira como está hoje** a parte do sistema que a task toca (telas,
    tabelas, regras de acesso) e rode o **RED** indicado no “Recorte da prova”.
@@ -142,7 +142,7 @@ Quando a Louise disser **“execute a próxima task”**:
    sempre por migração. Nunca exclua dados reais.
 5. Rode o **GREEN** (e a regressão, quando indicada) e entregue à Louise uma lista curta de **testes em
    linguagem simples** (“entre como colaborador e tente…”), com o resultado esperado de cada um.
-6. Atualize o `docs/mapa-do-tronco.md` com o que mudou.
+6. Atualize o `03_documentos/mapa-do-tronco.md` com o que mudou.
 7. Quando a Louise confirmar que os testes passaram, marque a task como ☑ aqui e na tabela “Tasks
    vinculadas” da SPEC.
 8. Se algo travar, se a task pedir uma decisão que não está escrita ou se o pedido sair do que a SPEC
@@ -179,7 +179,7 @@ Legenda de status: ☐ a fazer · ◐ em andamento · ☑ concluída · ⛔ bloq
 | ID | Task | Dono | SPEC | Critério | Recorte da prova | Prazo | Status |
 |---|---|---|---|---|---|---|---|
 | T1.01 | Auditar o tronco (sem alterar nada); registro em `06_notas/2026-10-20-auditoria-do-tronco.md` | Maestro (conduzido pela Louise) | SPEC-1-001 | CA-1-04 | RED + consultas de conferência | 23/10 | ☑ |
-| T1.02 | Corrigir as lacunas estruturais e escrever `docs/mapa-do-tronco.md` | Maestro | SPEC-1-001 | CA-1-01, 02, 03 | GREEN + REGRESSÃO | 23/10 | ☐ |
+| T1.02 | Corrigir as lacunas estruturais e escrever `03_documentos/mapa-do-tronco.md` | Maestro | SPEC-1-001 | CA-1-01, 02, 03 | GREEN + REGRESSÃO | 23/10 | ◐ |
 
 ### Leva 2 — Galhos: segurança e clientes
 

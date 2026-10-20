@@ -39,7 +39,7 @@ Quando pedirem **“execute a próxima task”**, siga as **Instruções para o 
 `04_fase-atual/fase.md`. Em resumo:
 
 1. Pegue a primeira task ☐ cujo dono é o Maestro e leia a SPEC dela por inteiro.
-2. Use `docs/mapa-do-tronco.md` (no repositório de código) como verdade sobre telas, tabelas e campos;
+2. Use `03_documentos/mapa-do-tronco.md` (neste repositório) como verdade sobre telas, tabelas e campos;
    o Skip cria o banco junto com as telas, então não suponha nomes.
 3. Confira como está hoje antes de mudar, rode a prova RED, implemente só o que a task pede, rode o
    GREEN e entregue testes em linguagem simples para a Louise.

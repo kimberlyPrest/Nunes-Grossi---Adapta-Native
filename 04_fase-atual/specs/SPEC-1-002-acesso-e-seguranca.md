@@ -20,11 +20,11 @@ excluir clientes ou oportunidades definitivamente.
   criar, alterar, excluir); pasta de documentos privada com regra por oportunidade e links temporários
   de download; menus e rotas por perfil.
 - **Fora de escopo:** edição de catálogo e fluxos pela tela (Fase 2); tela de auditoria (Fase 3).
-- **Entradas e pré-condições:** SPEC-1-001 aceita; `docs/mapa-do-tronco.md` com os nomes reais;
+- **Entradas e pré-condições:** SPEC-1-001 aceita; `03_documentos/mapa-do-tronco.md` com os nomes reais;
   respostas D-01 (Vinícius) e D-03 (visibilidade entre equipes). Sem resposta da D-03, aplicar a
   proposta da consultoria (ver Regras).
 - **Saídas/artefatos:** migrações com as regras de acesso; seção “Matriz de acesso” em
-  `docs/mapa-do-tronco.md`; 4 usuários de teste (um por perfil e um de outra equipe).
+  `03_documentos/mapa-do-tronco.md`; 4 usuários de teste (um por perfil e um de outra equipe).
 - **Dependências e responsáveis:** Maestro implementa; Louise roda os testes com os usuários de teste.
 - **Risco e plano B:** uma regra muito restrita pode esconder dados do próprio responsável.
   **Plano B:** os testes de regressão abaixo cobrem o responsável, a fila e o gestor antes de aceitar.

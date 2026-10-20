@@ -101,3 +101,4 @@ as oportunidades abertas continuam iguais.
 |---|---|---|---|
 | 20/10/2026 | Consultoria | T4.00, T4.03 | A revisão dos fluxos sai do início da fase e vai para depois das visões: T4.01 confere só com os fluxos piloto; a revisão é aplicada na nova T4.03 |
 | 20/10/2026 | Consultoria | Fora de escopo | Páginas Fluxos e Catálogo seguem só de consulta na Fase 1; a configuração completa pela interface (incluir, editar, ativar/desativar) fica explícita na Fase 2 |
+| 20/10/2026 | Verificação da T1.02 | T4.01, T4.02 | Página Catálogo deve mostrar a situação de origens e motivos (T4.01); a Nova oportunidade deve listar só origens ativas (T4.02) |

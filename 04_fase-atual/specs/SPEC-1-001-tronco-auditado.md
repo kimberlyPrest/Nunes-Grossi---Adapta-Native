@@ -10,7 +10,7 @@
 
 O esqueleto completo da Fase 1 existe e funciona de forma básica: login, menu, usuários, clientes,
 catálogo, os 3 modelos de fluxo, abertura de oportunidade, ficha, movimento de etapas e as páginas de
-visão. Além disso, existe um **mapa do tronco** (`docs/mapa-do-tronco.md` no repositório de código) que
+visão. Além disso, existe um **mapa do tronco** (`03_documentos/mapa-do-tronco.md` no repositório de contexto) que
 diz exatamente quais telas, tabelas, campos e ligações o Skip criou. Esse mapa é a base que todas as
 SPECs seguintes usam.
 
@@ -24,7 +24,7 @@ SPECs seguintes usam.
   a 1-006). Nesta SPEC o Maestro **não redesenha telas**.
 - **Entradas e pré-condições:** projeto Skip “login corretora” (05/10); Skip e Maestro conectados ao
   GitHub; projeto Supabase criado na conta da N&G, região São Paulo; plugin dos 7 agentes instalado no Maestro.
-- **Saídas/artefatos:** sistema com o tronco; `docs/mapa-do-tronco.md`; tabela “Observações do tronco”
+- **Saídas/artefatos:** sistema com o tronco; `03_documentos/mapa-do-tronco.md`; tabela “Observações do tronco”
   preenchida no arquivo de prompts.
 - **Dependências e responsáveis:** Louise envia os prompts e conduz a auditoria (T1.01 e T1.02) sozinha no Maestro.
 - **Risco e plano B:** o Skip gerar nomes ou estruturas diferentes do esperado. **Plano B:** o mapa
@@ -69,7 +69,7 @@ Dados iniciais esperados: 2 equipes; 8 seguradoras; 14 produtos; 8 origens; 9 mo
 1. Louise faz o Passo 0 e envia os Prompts 1 a 10, um por vez, fazendo a conferência rápida de cada um.
 2. O Maestro (T1.01) lê o código no GitHub e o banco conectado e compara com o modelo de referência,
    **sem alterar nada**.
-3. A auditoria é registrada em `06_notas/2026-10-20-auditoria-do-tronco.md`; na T1.02, o Maestro escreve `docs/mapa-do-tronco.md` com: telas e rotas existentes; tabelas reais com colunas,
+3. A auditoria é registrada em `06_notas/2026-10-20-auditoria-do-tronco.md`; na T1.02, o Maestro escreve `03_documentos/mapa-do-tronco.md` com: telas e rotas existentes; tabelas reais com colunas,
    tipos e ligações; dados iniciais encontrados; e uma lista de **lacunas** classificadas em
    *estrutural* (corrigir agora), *regra/segurança* (SPEC indicada) e *visual* (SPEC indicada).
 4. A Louise lê a lista de lacunas que o Maestro entregou e confirma as estruturais (as de regra/segurança e visuais ficam para as SPECs indicadas).
@@ -86,16 +86,16 @@ Dados iniciais esperados: 2 equipes; 8 seguradoras; 14 produtos; 8 origens; 9 mo
 - [x] Passo 0 concluído: Supabase conectado ao projeto Skip.
 - [x] Prompts 1 a 10 enviados, cada um com a conferência rápida feita.
 - [x] Observações do tronco registradas no arquivo de prompts.
-- [ ] `docs/mapa-do-tronco.md` criado no repositório de código.
+- [x] `03_documentos/mapa-do-tronco.md` criado (20/10/2026).
 - [x] Lacunas estruturais confirmadas (`06_notas/2026-10-20-auditoria-do-tronco.md`).
-- [ ] Lacunas estruturais corrigidas e mapa atualizado.
+- [x] Lacunas estruturais corrigidas (migração `20261017010000_seis_ajustes_estruturais.sql`) e mapa atualizado.
 
 ## Critérios de aceite
 
-- [ ] **CA-1-01:** Todas as gavetas do modelo de referência existem no banco (com nome real registrado no mapa) e as ligações listadas estão criadas.
-- [ ] **CA-1-02:** Os dados iniciais conferem: 2 equipes, 8 seguradoras, 14 produtos, 8 origens, 9 motivos de perda e 3 modelos de fluxo com 5, 7 e 12 etapas.
+- [x] **CA-1-01:** Todas as gavetas do modelo de referência existem no banco (com nome real registrado no mapa) e as ligações listadas estão criadas.
+- [x] **CA-1-02:** Os dados iniciais conferem: 2 equipes, 8 seguradoras, 14 produtos, 8 origens, 9 motivos de perda e 3 modelos de fluxo com 5, 7 e 12 etapas.
 - [ ] **CA-1-03:** As 10 páginas do tronco abrem sem erro (Minha fila, Oportunidades, Quadro, Clientes, ficha do cliente, Nova oportunidade, ficha da oportunidade, Painel, Usuários, Configurações → Catálogo/Fluxos).
-- [ ] **CA-1-04:** `docs/mapa-do-tronco.md` existe, lista telas, tabelas reais, colunas e lacunas, e nenhuma lacuna estrutural continua aberta.
+- [x] **CA-1-04:** `03_documentos/mapa-do-tronco.md` existe, lista telas, tabelas reais, colunas e lacunas, e nenhuma lacuna estrutural continua aberta.
 
 ## TDD da SPEC
 
@@ -109,7 +109,7 @@ Dados iniciais esperados: 2 equipes; 8 seguradoras; 14 produtos; 8 origens; 9 mo
 **Consultas de conferência:** contagem de linhas por tabela de catálogo; contagem de etapas por modelo;
 lista de tabelas e colunas do esquema público; lista de pastas de arquivos.
 **Caminhos de erro obrigatórios:** gaveta ausente; ligação ausente; dado inicial faltando; banco errado.
-**Evidência exigida:** `docs/mapa-do-tronco.md` com a seção de conferência e os prints.
+**Evidência exigida:** `03_documentos/mapa-do-tronco.md` com a seção de conferência e os prints.
 
 ## Tasks vinculadas
 
@@ -127,7 +127,7 @@ lista de tabelas e colunas do esquema público; lista de pastas de arquivos.
 | T0.09 | Prompt 9 — Movimento | Louise | SPEC-1-001 | Conferência rápida P9 | — | ☑ |
 | T0.10 | Prompt 10 — Visões e painel | Louise | SPEC-1-001 | Conferência rápida P10 | — | ☑ |
 | T1.01 | Auditar o tronco (sem alterar nada); registro em `06_notas/2026-10-20-auditoria-do-tronco.md` | Maestro (conduzido pela Louise) | SPEC-1-001 | CA-1-04 (mapa e lacunas) | RED + GREEN parcial: consultas de conferência registradas | ☑ |
-| T1.02 | Corrigir as lacunas estruturais e escrever `docs/mapa-do-tronco.md` | Maestro | SPEC-1-001 | CA-1-01, CA-1-02, CA-1-03 | GREEN + REGRESSÃO | ☐ |
+| T1.02 | Corrigir as lacunas estruturais e escrever `03_documentos/mapa-do-tronco.md` | Maestro | SPEC-1-001 | CA-1-01, CA-1-02, CA-1-03 | GREEN + REGRESSÃO | ◐ |
 
 ## Emendas
 

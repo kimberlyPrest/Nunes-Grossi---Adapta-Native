@@ -3,8 +3,8 @@
 **Data:** 20/10/2026 · **SPEC:** SPEC-1-001 · **Base auditada:** repositório de código, commit `ae41b24`
 (`05_entregas/central-do-fluxo-comercial`), migrações `supabase/migrations/` e telas em `src/`.
 
-Conferência feita sem alterar nada no sistema. Este arquivo é a base do `docs/mapa-do-tronco.md`, que
-o Maestro cria no repositório de código na T1.02, junto com a correção das lacunas estruturais.
+Conferência feita sem alterar nada no sistema. Este arquivo é a base do `03_documentos/mapa-do-tronco.md`,
+criado depois da T1.02, junto com a correção das lacunas estruturais.
 
 ## Resultado
 
