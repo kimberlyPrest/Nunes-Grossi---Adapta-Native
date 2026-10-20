@@ -29,7 +29,7 @@ Detalhes em `01_projeto/objetivo.md` e `01_projeto/visao-do-projeto.md`.
 | `03_documentos/` | Prompts do tronco (Skip) e fluxos piloto da fase atual |
 | `04_fase-atual/fase.md` | **A fase em execução**: resultado, telas, regras, testes de aceite e a tabela de Tasks |
 | `04_fase-atual/specs/` | SPECs da fase atual (contrato de cada entrega, com critérios de aceite e prova) |
-| `05_entregas/` | Entregas concluídas e evidências |
+| `05_entregas/` | Entregas concluídas e evidências; `central-do-fluxo-comercial/` é o submódulo com o código do sistema (somente leitura) |
 | `06_notas/` | Notas de trabalho do projeto; `debug/` para registros de problemas |
 | `STATUS.md` / `changelog.md` | Situação atual e histórico |
 
