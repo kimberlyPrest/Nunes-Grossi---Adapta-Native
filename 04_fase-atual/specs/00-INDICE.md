@@ -5,7 +5,7 @@ Ordem de execução: primeiro o **tronco** (prompts no Skip, dentro da SPEC-1-00
 
 | SPEC | Entrega | Tipo | Depende de | Critérios | Tasks | Status |
 |---|---|---|---|---|---|---|
-| [SPEC-1-001](SPEC-1-001-tronco-auditado.md) | Tronco criado, auditado e mapeado | Tronco (prompts) + auditoria | — | CA-1-01 a 04 | T0.00–T0.10, T1.01–T1.02 | em andamento |
+| [SPEC-1-001](SPEC-1-001-tronco-auditado.md) | Tronco criado, auditado e mapeado | Tronco (prompts) + auditoria | — | CA-1-01 a 04 | T0.00–T0.10, T1.01–T1.02 | concluída |
 | [SPEC-1-002](SPEC-1-002-acesso-e-seguranca.md) | Acesso, perfis e segurança no banco | Galho — permissão | 1-001 | CA-1-05 a 09 | T2.01–T2.04 | planejada |
 | [SPEC-1-003](SPEC-1-003-clientes.md) | Cadastro de clientes confiável | Galho — dado | 1-002 | CA-1-10 a 13 | T3.01–T3.02 | planejada |
 | [SPEC-1-004](SPEC-1-004-fluxos-e-abertura.md) | Fluxos corretos e abertura de oportunidade | Galho — dado + regra | 1-002 | CA-1-14 a 18 | T4.00–T4.03 | planejada |

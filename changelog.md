@@ -6,6 +6,7 @@
 - Mapa do tronco criado em `03_documentos/mapa-do-tronco.md` (neste repositório), com a árvore de telas e tabelas; referências atualizadas.
 - Pendências menores registradas nas Emendas das SPECs 1-004 (T4.01, T4.02) e 1-005 (T5.01).
 - Submódulo do código atualizado para `afe8fff`.
+- Conferência rápida feita pela Louise: T1.02 concluída e SPEC-1-001 encerrada.
 
 ## 2026-10-20 — Tronco concluído e auditado
 

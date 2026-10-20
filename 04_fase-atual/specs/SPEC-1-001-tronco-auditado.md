@@ -1,7 +1,7 @@
 # SPEC-1-001 — Tronco criado, auditado e mapeado
 
 **Fase:** 1 — Primeira jornada viva
-**Status:** em andamento (auditoria concluída em 20/10/2026; falta a T1.02)
+**Status:** concluída (20/10/2026)
 **Dono:** Louise (prompts, condução da auditoria no Maestro e testes) · Maestro (auditoria e correções)
 **Origem:** `04_fase-atual/fase.md` (sequência de construção, itens 1 a 6) e `01_projeto/constituicao.md`
 **Degrau da solução:** nativo da plataforma: o Skip gera telas e banco a partir dos prompts do tronco; o Maestro só confere e completa o que faltou
@@ -94,7 +94,7 @@ Dados iniciais esperados: 2 equipes; 8 seguradoras; 14 produtos; 8 origens; 9 mo
 
 - [x] **CA-1-01:** Todas as gavetas do modelo de referência existem no banco (com nome real registrado no mapa) e as ligações listadas estão criadas.
 - [x] **CA-1-02:** Os dados iniciais conferem: 2 equipes, 8 seguradoras, 14 produtos, 8 origens, 9 motivos de perda e 3 modelos de fluxo com 5, 7 e 12 etapas.
-- [ ] **CA-1-03:** As 10 páginas do tronco abrem sem erro (Minha fila, Oportunidades, Quadro, Clientes, ficha do cliente, Nova oportunidade, ficha da oportunidade, Painel, Usuários, Configurações → Catálogo/Fluxos).
+- [x] **CA-1-03:** As 10 páginas do tronco abrem sem erro (Minha fila, Oportunidades, Quadro, Clientes, ficha do cliente, Nova oportunidade, ficha da oportunidade, Painel, Usuários, Configurações → Catálogo/Fluxos).
 - [x] **CA-1-04:** `03_documentos/mapa-do-tronco.md` existe, lista telas, tabelas reais, colunas e lacunas, e nenhuma lacuna estrutural continua aberta.
 
 ## TDD da SPEC
@@ -127,7 +127,7 @@ lista de tabelas e colunas do esquema público; lista de pastas de arquivos.
 | T0.09 | Prompt 9 — Movimento | Louise | SPEC-1-001 | Conferência rápida P9 | — | ☑ |
 | T0.10 | Prompt 10 — Visões e painel | Louise | SPEC-1-001 | Conferência rápida P10 | — | ☑ |
 | T1.01 | Auditar o tronco (sem alterar nada); registro em `06_notas/2026-10-20-auditoria-do-tronco.md` | Maestro (conduzido pela Louise) | SPEC-1-001 | CA-1-04 (mapa e lacunas) | RED + GREEN parcial: consultas de conferência registradas | ☑ |
-| T1.02 | Corrigir as lacunas estruturais e escrever `03_documentos/mapa-do-tronco.md` | Maestro | SPEC-1-001 | CA-1-01, CA-1-02, CA-1-03 | GREEN + REGRESSÃO | ◐ |
+| T1.02 | Corrigir as lacunas estruturais e escrever `03_documentos/mapa-do-tronco.md` | Maestro | SPEC-1-001 | CA-1-01, CA-1-02, CA-1-03 | GREEN + REGRESSÃO | ☑ |
 
 ## Emendas
 

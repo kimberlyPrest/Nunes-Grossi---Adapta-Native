@@ -179,7 +179,7 @@ Legenda de status: ☐ a fazer · ◐ em andamento · ☑ concluída · ⛔ bloq
 | ID | Task | Dono | SPEC | Critério | Recorte da prova | Prazo | Status |
 |---|---|---|---|---|---|---|---|
 | T1.01 | Auditar o tronco (sem alterar nada); registro em `06_notas/2026-10-20-auditoria-do-tronco.md` | Maestro (conduzido pela Louise) | SPEC-1-001 | CA-1-04 | RED + consultas de conferência | 23/10 | ☑ |
-| T1.02 | Corrigir as lacunas estruturais e escrever `03_documentos/mapa-do-tronco.md` | Maestro | SPEC-1-001 | CA-1-01, 02, 03 | GREEN + REGRESSÃO | 23/10 | ◐ |
+| T1.02 | Corrigir as lacunas estruturais e escrever `03_documentos/mapa-do-tronco.md` | Maestro | SPEC-1-001 | CA-1-01, 02, 03 | GREEN + REGRESSÃO | 23/10 | ☑ |
 
 ### Leva 2 — Galhos: segurança e clientes
 
