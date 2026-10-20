@@ -5,6 +5,7 @@
 - Prompts 1 a 10 do tronco enviados pela Louise (T0.00 a T0.10).
 - Auditoria do tronco (T1.01) registrada em `06_notas/2026-10-20-auditoria-do-tronco.md`: dados iniciais conferem; 6 lacunas estruturais para a T1.02.
 - Etapa 10 do fluxo Saúde PME ajustada pela N&G durante o tronco, aceita como está.
+- Revisão das SPECs contra o tronco: passagem para o pós-venda da J6 testada na etapa 12 (SPECs 1-002, 1-005, 1-007, fluxo piloto e escopo); 7ª lacuna estrutural (datas de ganho e perda) incluída na auditoria; T1.02 passa a escrever o `docs/mapa-do-tronco.md`.
 - Repositório de código incluído como submódulo em `05_entregas/central-do-fluxo-comercial`.
 
 ## 2026-10-16 — 2ª Consultoria

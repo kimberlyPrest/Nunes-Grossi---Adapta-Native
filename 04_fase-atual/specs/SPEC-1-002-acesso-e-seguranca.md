@@ -59,7 +59,7 @@ excluir clientes ou oportunidades definitivamente.
 |---|---|---|---|
 | Principal | Colaborador da equipe Saúde abre a lista | Vê só as suas, as em que foi responsável e as da fila Saúde/Comercial | — |
 | Limite | Colaborador Seguros acessa pelo endereço direto uma oportunidade de Saúde | Mensagem “Você não tem acesso a esta oportunidade” | Nada é exibido; tentativa não quebra a tela |
-| Limite | Fila Saúde/Pós-venda recebe a etapa 10 da J6 | Pessoas do pós-venda Saúde passam a ver e podem assumir | — |
+| Limite | Fila Saúde/Pós-venda recebe a etapa 12 da J6 | Pessoas do pós-venda Saúde passam a ver e podem assumir | — |
 | Falha | Alguém tenta excluir uma oportunidade pela API | Operação recusada pelo banco | Mensagem de erro amigável |
 
 ## Checklist de execução
@@ -86,7 +86,7 @@ excluir clientes ou oportunidades definitivamente.
 |---|---|---|---|---|
 | RED | Com o tronco recém-gerado, o colaborador de Seguros consegue ler oportunidades de Saúde (ou alguma tabela está sem regra) | Consulta “tabelas sem regra de acesso” + teste com o usuário Colaborador Seguros | Falha esperada registrada | Mapa, seção Matriz de acesso |
 | GREEN | Regras aplicadas | Repetir a consulta e os testes CA-1-05 a CA-1-08 com os 4 usuários de teste | Zero tabelas sem regra; os 4 testes passam | Prints dos testes |
-| REFACTOR/REGRESSÃO | O responsável e a fila continuam vendo o que devem | Colaborador Saúde/Pós-venda vê a etapa 10 da J6 na fila e assume; o gestor vê as da equipe | Passa | Prints |
+| REFACTOR/REGRESSÃO | O responsável e a fila continuam vendo o que devem | Colaborador Saúde/Pós-venda vê a etapa 12 da J6 na fila e assume; o gestor vê as da equipe | Passa | Prints |
 
 **Dados/fixtures:** os 4 usuários de teste; 1 oportunidade J3 (Seguros) e 1 J6 (Saúde) com um documento anexado em cada.
 **Caminhos de erro obrigatórios:** acesso por endereço direto; tentativa de exclusão; usuário inativo; download por link vencido.

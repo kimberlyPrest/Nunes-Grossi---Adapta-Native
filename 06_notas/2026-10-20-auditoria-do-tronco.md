@@ -9,7 +9,7 @@ o Maestro cria no repositório de código na T1.02, junto com a correção das l
 ## Resultado
 
 Os 10 prompts do tronco foram aplicados. Todas as telas existem e os dados iniciais conferem.
-Restam **6 lacunas estruturais** (abaixo), a corrigir na T1.02.
+Restam **7 lacunas estruturais** (abaixo), a corrigir na T1.02.
 
 ## Conferência dos dados iniciais (CA-1-02)
 
@@ -53,7 +53,7 @@ Restam **6 lacunas estruturais** (abaixo), a corrigir na T1.02.
 | Modelos de fluxo | `fluxo_modelos` | |
 | Etapas do modelo | `fluxo_etapas` | |
 | Itens do modelo | `fluxo_checklist_itens` | |
-| Oportunidades | `oportunidades` | sem valor fechado (lacuna 1) e sem motivo de perda (lacuna 2) |
+| Oportunidades | `oportunidades` | sem valor fechado (lacuna 1), motivo de perda (lacuna 2) e datas de ganho/perda (lacuna 7) |
 | Etapas da oportunidade (cópia) | `oportunidades_etapas` | sem "concluída por" (lacuna 3) |
 | Itens da oportunidade (cópia) | `oportunidades_checklist_itens` | o anexo fica no próprio item (lacuna 4) |
 | Documentos | — (colunas `arquivo_*` no item) | lacuna 4 |
@@ -77,6 +77,7 @@ Ações do fluxo no banco: `abrir_oportunidade`, `concluir_etapa_oportunidade`, 
 | 4 | **Documentos** guardados no próprio item do checklist (um arquivo por item) | Item como "Cotações anexadas" não aceita vários arquivos; novo anexo substitui o anterior |
 | 5 | **Origem do cliente** em texto livre | Não usa a lista de origens do catálogo |
 | 6 | **Origens** e **motivos** sem ativo/inativo | Não é possível desativar uma opção sem apagá-la |
+| 7 | Oportunidade sem **data do ganho** e **data da perda** | O Painel (SPEC-1-006) conta ganhas e perdidas no mês por essas datas, que hoje só existem na linha do tempo |
 
 ## Alterações feitas pela N&G durante o tronco (aceitas)
 
@@ -84,4 +85,5 @@ Ações do fluxo no banco: `abrir_oportunidade`, `concluir_etapa_oportunidade`, 
   etapa para ficar com o responsável comercial (e não com a fila Pós-venda) e trocou o item único por
   três itens condicionais: "Cliente possui plano anterior ativo?" (obrigatório), "Plano anterior já foi
   cancelado?" e a orientação/carta de cancelamento (opcionais). A etapa 12 continua na fila Saúde e
-  Odonto / Pós-venda. Não é lacuna.
+  Odonto / Pós-venda. Não é lacuna. Por isso, a passagem para a fila do pós-venda (teste de aceite 8,
+  CA-1-20) passa a ser testada na etapa 12; SPECs 1-002, 1-005 e 1-007 e o fluxo piloto J6 ajustados.

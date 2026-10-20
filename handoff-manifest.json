@@ -5,11 +5,11 @@
     "adapta": "0.7.0",
     "adaptaCliente": "0.7.0"
   },
-  "generatedAt": "2026-10-20T13:31:24.026Z",
+  "generatedAt": "2026-10-20T13:34:45.728Z",
   "files": [
     {
       "path": "04_fase-atual/fase.md",
-      "sha256": "5b2cb35ce655efa786cfc2db7bd176f052d5d5142970cbe534f67be2a6ccebc3",
+      "sha256": "10e95a42c8de83650a24e5761c585282f2519522c5f3e2c501b07b506e0eb19d",
       "classification": "fase-atual"
     },
     {
@@ -19,12 +19,12 @@
     },
     {
       "path": "04_fase-atual/specs/SPEC-1-001-tronco-auditado.md",
-      "sha256": "ac3e4229d564fdb651128196c970ebec1383e064ffcd436e5b568b9538a1f121",
+      "sha256": "7fa42f6b912d8d1e599269fc2ef3909515d4e4b1048506bae554fbe182980521",
       "classification": "spec-fase-atual"
     },
     {
       "path": "04_fase-atual/specs/SPEC-1-002-acesso-e-seguranca.md",
-      "sha256": "56abf6790e8137a5acde4c82f49569c9de11b851817b6663976d6d1a0a4998eb",
+      "sha256": "5f513aaff23d48124d91ae1cd2c17ff2cb27e281b1542fbb72141604686c37db",
       "classification": "spec-fase-atual"
     },
     {
@@ -39,7 +39,7 @@
     },
     {
       "path": "04_fase-atual/specs/SPEC-1-005-execucao-do-fluxo.md",
-      "sha256": "e5f2a240fe32009ad5891c446b4d0df7b2cdd3038759615d87f31edaf8cfda58",
+      "sha256": "b5bcbbe50a0d900d28cddfaf646c848a8a15ee525296180bea5b400112e65095",
       "classification": "spec-fase-atual"
     },
     {
@@ -49,7 +49,7 @@
     },
     {
       "path": "04_fase-atual/specs/SPEC-1-007-ensaio-real-e-aceite.md",
-      "sha256": "ef42406d3c8b9689616b597285fe959d8d8c62ab19f5f459c8bd2400c631b9d7",
+      "sha256": "392a82113b7b48ecdda8bf3587d844d0c3a726f675d5d7668178952ee1117382",
       "classification": "spec-fase-atual"
     }
   ]

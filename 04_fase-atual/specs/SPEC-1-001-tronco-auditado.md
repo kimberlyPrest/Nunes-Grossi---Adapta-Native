@@ -69,11 +69,11 @@ Dados iniciais esperados: 2 equipes; 8 seguradoras; 14 produtos; 8 origens; 9 mo
 1. Louise faz o Passo 0 e envia os Prompts 1 a 10, um por vez, fazendo a conferência rápida de cada um.
 2. O Maestro (T1.01) lê o código no GitHub e o banco conectado e compara com o modelo de referência,
    **sem alterar nada**.
-3. O Maestro escreve `docs/mapa-do-tronco.md` com: telas e rotas existentes; tabelas reais com colunas,
+3. A auditoria é registrada em `06_notas/2026-10-20-auditoria-do-tronco.md`; na T1.02, o Maestro escreve `docs/mapa-do-tronco.md` com: telas e rotas existentes; tabelas reais com colunas,
    tipos e ligações; dados iniciais encontrados; e uma lista de **lacunas** classificadas em
    *estrutural* (corrigir agora), *regra/segurança* (SPEC indicada) e *visual* (SPEC indicada).
 4. A Louise lê a lista de lacunas que o Maestro entregou e confirma as estruturais (as de regra/segurança e visuais ficam para as SPECs indicadas).
-5. O Maestro (T1.02) corrige só as lacunas estruturais, por migração, e atualiza o mapa.
+5. O Maestro (T1.02) corrige só as lacunas estruturais, por migração, e escreve o mapa.
 
 | Cenário | Dado/condição | Resultado esperado | Caminho de erro/recuperação |
 |---|---|---|---|
@@ -126,8 +126,8 @@ lista de tabelas e colunas do esquema público; lista de pastas de arquivos.
 | T0.08 | Prompt 8 — Ficha da oportunidade | Louise | SPEC-1-001 | Conferência rápida P8 | — | ☑ |
 | T0.09 | Prompt 9 — Movimento | Louise | SPEC-1-001 | Conferência rápida P9 | — | ☑ |
 | T0.10 | Prompt 10 — Visões e painel | Louise | SPEC-1-001 | Conferência rápida P10 | — | ☑ |
-| T1.01 | Auditar o tronco e escrever o mapa (sem alterar nada) | Maestro (conduzido pela Louise) | SPEC-1-001 | CA-1-04 (mapa e lacunas) | RED + GREEN parcial: consultas de conferência registradas | ☑ |
-| T1.02 | Corrigir as lacunas estruturais e atualizar o mapa | Maestro | SPEC-1-001 | CA-1-01, CA-1-02, CA-1-03 | GREEN + REGRESSÃO | ☐ |
+| T1.01 | Auditar o tronco (sem alterar nada); registro em `06_notas/2026-10-20-auditoria-do-tronco.md` | Maestro (conduzido pela Louise) | SPEC-1-001 | CA-1-04 (mapa e lacunas) | RED + GREEN parcial: consultas de conferência registradas | ☑ |
+| T1.02 | Corrigir as lacunas estruturais e escrever `docs/mapa-do-tronco.md` | Maestro | SPEC-1-001 | CA-1-01, CA-1-02, CA-1-03 | GREEN + REGRESSÃO | ☐ |
 
 ## Emendas
 

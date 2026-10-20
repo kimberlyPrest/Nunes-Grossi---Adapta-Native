@@ -46,7 +46,7 @@ avança, perda sempre tem motivo e tudo fica registrado na linha do tempo.
 
 | Cenário | Dado/condição | Resultado esperado | Caminho de erro/recuperação |
 |---|---|---|---|
-| Principal | J6 da etapa 1 à 12 | Passa pelas etapas; na 10 e na 12 cai na fila Saúde/Pós-venda; ganho na 11; “Concluída” na 12 | — |
+| Principal | J6 da etapa 1 à 12 | Passa pelas etapas; ganho na 11; na 12 cai na fila Saúde/Pós-venda; “Concluída” na 12 | — |
 | Limite | Concluir a etapa 6 da J6 sem o cartão CNPJ | Recusado com a lista do que falta | Anexar e concluir |
 | Limite | Dois usuários do pós-venda clicam “Assumir” juntos | Um assume; o outro vê “já assumida por …” | — |
 | Falha | Perda sem motivo | Recusada | Escolher motivo |
@@ -65,7 +65,7 @@ avança, perda sempre tem motivo e tudo fica registrado na linha do tempo.
 ## Critérios de aceite
 
 - [ ] **CA-1-19:** A etapa “Documentação para implantação” da J6 não conclui sem o cartão CNPJ (teste de aceite 6).
-- [ ] **CA-1-20:** Ao concluir a etapa 9 da J6, a etapa 10 cai na fila Saúde/Pós-venda com aviso no sino de quem é dessa fila; a pessoa assume e conclui (teste de aceite 8).
+- [ ] **CA-1-20:** Ao concluir a etapa 11 (ganho) da J6, a etapa 12 cai na fila Saúde/Pós-venda com aviso no sino de quem é dessa fila; a pessoa assume e conclui (teste de aceite 8).
 - [ ] **CA-1-21:** Voltar etapa exige motivo, e ele aparece na linha do tempo (teste de aceite 9).
 - [ ] **CA-1-22:** Perda sem motivo não é aceita (teste de aceite 10); ganho exige seguradora, valor e nº da proposta.
 - [ ] **CA-1-23:** Uma J3 e uma J6 chegam a “Concluída”, e a linha do tempo mostra cada passo com pessoa e horário.
@@ -95,4 +95,4 @@ avança, perda sempre tem motivo e tudo fica registrado na linha do tempo.
 
 | Data | Origem do sinal | Micro-spec/task | Motivo |
 |---|---|---|---|
-| | | | |
+| 20/10/2026 | Auditoria do tronco | CA-1-20 | A etapa 10 da J6 passou para o responsável comercial (ajuste da N&G); a passagem para a fila do pós-venda é testada na etapa 12 |

@@ -29,7 +29,7 @@ demonstração e dá o aceite da Fase 1.
 ## Fluxo e regras
 
 1. Louise cadastra os usuários reais e arquiva as oportunidades de teste.
-2. Isabelle abre a J6 e percorre até a etapa 9; o pós-venda Saúde assume a etapa 10; Isabelle conclui a 11 (ganho); o pós-venda conclui a 12.
+2. Isabelle abre a J6 e percorre até a etapa 11 (ganho); o pós-venda Saúde assume e conclui a 12.
 3. Sheyla abre a J3 e percorre até “Apólice emitida”.
 4. Louise roda os 13 testes de aceite da fase e preenche a tabela de evidências.
 5. Ajustes percebidos no uso viram a lista “Para a Fase 2” (não são construídos agora).
@@ -80,9 +80,9 @@ demonstração e dá o aceite da Fase 1.
 | 12 | Quadro mostra o cartão na coluna certa | | |
 | 13 | Painel bate com os testes | | |
 
-> Observação para o teste 8: no fluxo J6 revisado, a primeira passagem para a fila do pós-venda acontece
-> ao concluir a etapa 9 (a etapa 10 é do pós-venda). Se a revisão da Isabelle mudar a ordem, vale a
-> etapa que entrega para o pós-venda.
+> Observação para o teste 8: no fluxo J6 atual, a passagem para a fila do pós-venda acontece ao concluir
+> a etapa 11 (a etapa 12 é do pós-venda; a etapa 10 ficou com o comercial por ajuste da N&G). Se a
+> revisão da Isabelle mudar a ordem, vale a etapa que entrega para o pós-venda.
 
 ### Para a Fase 2 (ajustes percebidos no uso)
 

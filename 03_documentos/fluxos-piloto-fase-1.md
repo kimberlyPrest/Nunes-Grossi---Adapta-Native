@@ -28,7 +28,7 @@
 | 7 | Digitação no portal da operadora | Interno | Comercial ou Implantação **[VALIDAR D-11]** | Proposta digitada e enviada para análise ✱ |
 | 8 | Assinatura e críticas | Aguardando cliente / operadora | Mesmo responsável da etapa 7 | Assinatura digital do cliente ✱; críticas da operadora resolvidas ✱ (pode voltar à etapa 6) |
 | 9 | Primeiro boleto | Aguardando cliente | Mesmo responsável | Boleto enviado ✱; pagamento confirmado ✱ (vigência começa após a compensação, até 72h) |
-| 10 | Cancelamento do plano anterior | Aguardando cliente | Pós-venda Saúde | Orientação/modelo de carta enviado ✱ (**só depois** da implantação e do pagamento do novo plano) |
+| 10 | Cancelamento do plano anterior | Aguardando cliente | Comercial Saúde (ajuste da N&G no tronco, 20/10) | Cliente possui plano anterior ativo? ✱; plano anterior já cancelado?; orientação/modelo de carta enviado, **só depois** da implantação e do pagamento do novo plano (quando o plano anterior ainda estiver ativo) |
 | 11 | Fechamento | Interno | Comercial Saúde | Registro no Quiver ✱; prêmio/mensalidade ✱ |
 | 12 | Boas-vindas e implantação | Interno | **Pós-venda Saúde** (passagem automática) | Materiais de acesso enviados ✱; contato do RH registrado ✱ |
 
