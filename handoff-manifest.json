@@ -5,16 +5,16 @@
     "adapta": "0.7.0",
     "adaptaCliente": "0.7.0"
   },
-  "generatedAt": "2026-10-20T13:43:06.588Z",
+  "generatedAt": "2026-10-20T13:51:35.659Z",
   "files": [
     {
       "path": "04_fase-atual/fase.md",
-      "sha256": "6e992fa2db25400bb01acf4f1426a7ac82b658fb1476462ffe77ae6a9d38eaf1",
+      "sha256": "1e770d1dc97ebcbe6506b0f035be92208cf015cc3a17885b4bf1b7a510342c2b",
       "classification": "fase-atual"
     },
     {
       "path": "04_fase-atual/specs/00-INDICE.md",
-      "sha256": "98203c1beebb81949270b4d0f2edc5131475c47cdce78821775e52f5f07e3580",
+      "sha256": "b8b8ed63ca192ffb38a122aee1fdb9eb62acb8df0bc7c6088b0d11489dfb453c",
       "classification": "spec-fase-atual"
     },
     {
@@ -34,7 +34,7 @@
     },
     {
       "path": "04_fase-atual/specs/SPEC-1-004-fluxos-e-abertura.md",
-      "sha256": "cf5912f15e4a0a81c73697a68012d60d30f6b850071f3223dcb1dd3271006609",
+      "sha256": "8fa6d2e5e8a8c4cd229959a21fafa5e9174dc546047067ebd7898ba6c4c700d1",
       "classification": "spec-fase-atual"
     },
     {

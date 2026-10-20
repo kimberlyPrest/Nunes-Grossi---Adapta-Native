@@ -676,6 +676,7 @@ dois minutos.
 | **Configurações > Produtos** | Nome, ramo, frente, ativo | Incluir, editar, desativar |
 | **Configurações > Motivos** | Motivos de perda, descarte e adiamento | Incluir, editar, desativar |
 | **Configurações > Origens** | Origens de lead | Incluir, editar, desativar |
+| **Configurações > Equipes** | Equipes (hoje Seguros e Saúde e Odonto) e quem faz parte de cada uma | Incluir, editar, desativar |
 | **Fluxos (lista)** | Fluxos por produto e seguradora, versão atual, ativo/inativo, nº de oportunidades em andamento | Criar, duplicar, ativar/desativar, abrir |
 | **Construtor de fluxo** | Etapas em ordem (arrastar para reordenar); para cada etapa: nome, descrição, tipo (interno, aguardando cliente, aguardando seguradora), responsável padrão (pessoa, papel ou fila), prazo sugerido (usado na Fase 3); checklist com itens do tipo documento, informação (texto, número, data, valor, sim/não, lista) ou confirmação, cada um obrigatório ou opcional; campos específicos do produto | Incluir/editar/remover etapas e itens; pré-visualizar; publicar nova versão |
 | **Validações e cálculos** (dentro do construtor) | Regras simples por campo: “não pode ser maior que”, “data não pode ser depois de”, “não aceitar os caracteres”, “calcular = campo × número” | Ativar e configurar nos campos |
@@ -687,6 +688,11 @@ dois minutos.
 - Os modelos de fluxo ganham **versões**: cada oportunidade aponta para a versão com que foi aberta.
 - Novas gavetas: validações de campo, vínculos entre fluxos, base de locais de eventos (se aprovada,
   D-10).
+- **Tudo configurável pela tela:** ao fim desta fase, nenhuma configuração do sistema depende de código
+  ou de pedir ao Maestro. Toda lista e todo modelo que aparece em Configurações (seguradoras, produtos,
+  motivos, origens, equipes e fluxos com etapas e itens) tem na própria tela os botões de incluir,
+  editar e ativar/desativar. As páginas Fluxos e Catálogo da Fase 1 são só de consulta e viram
+  telas editáveis aqui.
 - Só administradores (e gestores com a permissão “Editor de fluxos”, conforme D-02) acessam
   Configurações e o construtor. Colaboradores não veem essas telas.
 
@@ -702,7 +708,7 @@ dois minutos.
 
 #### Sequência de construção
 
-1. Telas de configuração (seguradoras, produtos, motivos, origens).
+1. Telas de configuração (seguradoras, produtos, motivos, origens e equipes).
 2. Lista de fluxos e construtor (etapas e responsáveis).
 3. Construtor (checklist e campos do produto) e pré-visualização.
 4. Versões, publicação, duplicação e ativação.
@@ -747,6 +753,7 @@ D-02 (quem edita fluxos), D-04 (validações prioritárias), D-09 (revisão dos 
 - [ ] Todos os 12 testes de aceite passaram.
 - [ ] 7 de 7 jornadas configuradas pela tela e usadas (C1).
 - [ ] Pelo menos um fluxo criado ou ajustado pela própria N&G, sem ajuda.
+- [ ] Nenhuma configuração depende de código: todas as listas e fluxos de Configurações têm incluir, editar e ativar/desativar pela tela.
 - [ ] Demonstração e aceite da Viviane.
 
 ---

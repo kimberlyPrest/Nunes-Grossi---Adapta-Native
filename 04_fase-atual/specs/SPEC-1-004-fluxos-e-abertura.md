@@ -14,17 +14,20 @@ as oportunidades abertas continuam iguais.
 
 ## Limites e dependências
 
-- **Inclui:** conferência item a item dos modelos J6, J3 e genérico contra `03_documentos/fluxos-piloto-fase-1.md` **e** a
-  revisão de Isabelle e Sheyla (D-09); a regra de escolha do modelo (produto + seguradora → produto →
+- **Inclui:** conferência item a item dos modelos J6, J3 e genérico contra `03_documentos/fluxos-piloto-fase-1.md`; a
+  revisão de Isabelle e Sheyla (D-09), aplicada no fim da fase (T4.00 e T4.03); a regra de escolha do modelo (produto + seguradora → produto →
   genérico) com o aviso; a cópia de etapas e itens com a versão do modelo; o protocolo sequencial
   único; a primeira etapa atual com o responsável certo; tudo numa operação só (ou cria tudo, ou não
   cria nada); a página Configurações → Fluxos (somente leitura) mostrando etapas, tipos, responsáveis,
   etapa de ganho e itens obrigatórios.
-- **Fora de escopo:** editar fluxos pela tela, versões e duplicação (Fase 2); validações e cálculos
+- **Fora de escopo:** criar e editar fluxos, etapas e itens pela tela, versões e duplicação (Fase 2); editar o
+  catálogo pela tela (Fase 2). Nesta fase as páginas Fluxos e Catálogo são **só de consulta, de propósito**:
+  não ganham botões de incluir ou editar. A Fase 2 entrega tudo configurável pela interface, sem depender
+  de código; validações e cálculos
   automáticos (Fase 2); prazos com alerta (Fase 3).
-- **Entradas e pré-condições:** SPEC-1-001 e SPEC-1-002 aceitas; respostas D-09 (revisão dos fluxos) e
+- **Entradas e pré-condições:** SPEC-1-001 e SPEC-1-002 aceitas; resposta da
   D-11 (quem faz a documentação e a digitação em Saúde). Sem resposta da D-11, mantém-se o responsável
-  comercial nas etapas 6 a 9 da J6.
+  comercial nas etapas 6 a 9 da J6. A D-09 (revisão dos fluxos) só é necessária para a T4.03, no fim da fase.
 - **Saídas/artefatos:** modelos conferidos; regra de abertura no banco; seção “Fluxos” no mapa do tronco.
 - **Dependências e responsáveis:** Isabelle e Sheyla devolvem a revisão (prints da página Fluxos com
   anotações bastam); o Maestro aplica.
@@ -87,12 +90,14 @@ as oportunidades abertas continuam iguais.
 
 | ID | Task | Dono | SPEC | Checklist/aceite | Recorte da prova | Status |
 |---|---|---|---|---|---|---|
-| T4.00 | Revisar J6 (Isabelle) e J3 (Sheyla) na página Configurações → Fluxos e devolver as anotações | Isabelle, Sheyla | SPEC-1-004 | Checklist item 2 | Anotações recebidas | ☐ |
-| T4.01 | Conferir e corrigir os modelos J6, J3 e genérico (fluxos piloto + revisões) e completar a página Fluxos | Maestro | SPEC-1-004 | CA-1-18 | RED (divergências) → GREEN (página confere) | ☐ |
+| T4.01 | Conferir e corrigir os modelos J6, J3 e genérico com os fluxos piloto e completar a página Fluxos (só consulta) | Maestro | SPEC-1-004 | Checklist item 1 | RED (divergências) → GREEN (página confere com os fluxos piloto) | ☐ |
 | T4.02 | Mover a abertura de oportunidade para uma operação única no banco (escolha do modelo, protocolo, cópia com versão, responsável, aviso do genérico) | Maestro | SPEC-1-004 | CA-1-14, CA-1-15, CA-1-16, CA-1-17 | GREEN + REGRESSÃO | ☐ |
+| T4.00 | Revisar J6 (Isabelle) e J3 (Sheyla) na página Configurações → Fluxos e devolver as anotações (depois das visões, antes do ensaio) | Isabelle, Sheyla | SPEC-1-004 | Checklist item 2 | Anotações recebidas | ☐ |
+| T4.03 | Aplicar nos modelos J6 e J3 a revisão de Isabelle e Sheyla e registrar nas Emendas | Maestro | SPEC-1-004 | CA-1-18 | GREEN (página confere com a revisão) | ☐ |
 
 ## Emendas
 
 | Data | Origem do sinal | Micro-spec/task | Motivo |
 |---|---|---|---|
-| | | | |
+| 20/10/2026 | Consultoria | T4.00, T4.03 | A revisão dos fluxos sai do início da fase e vai para depois das visões: T4.01 confere só com os fluxos piloto; a revisão é aplicada na nova T4.03 |
+| 20/10/2026 | Consultoria | Fora de escopo | Páginas Fluxos e Catálogo seguem só de consulta na Fase 1; a configuração completa pela interface (incluir, editar, ativar/desativar) fica explícita na Fase 2 |

@@ -6,6 +6,8 @@
 - Auditoria do tronco (T1.01) registrada em `06_notas/2026-10-20-auditoria-do-tronco.md`: dados iniciais conferem; 6 lacunas estruturais para a T1.02.
 - Etapa 10 do fluxo Saúde PME ajustada pela N&G durante o tronco, aceita como está.
 - Revisão das SPECs contra o tronco: passagem para o pós-venda da J6 testada na etapa 12 (SPECs 1-002, 1-005, 1-007, fluxo piloto e escopo); datas de ganho e perda incluídas na SPEC-1-005 (T5.03); T1.02 passa a escrever o `docs/mapa-do-tronco.md`.
+- Revisão dos fluxos J6 e J3 (T4.00) movida para depois das visões (Leva 4b, até 29/10), aplicada na nova T4.03; T4.01 confere só com os fluxos piloto.
+- Fase 2 (escopo): explícito que tudo em Configurações fica configurável pela tela, sem depender de código, incluindo equipes; páginas Fluxos e Catálogo seguem só de consulta na Fase 1.
 - Repositório de código incluído como submódulo em `05_entregas/central-do-fluxo-comercial`.
 
 ## 2026-10-16 — 2ª Consultoria

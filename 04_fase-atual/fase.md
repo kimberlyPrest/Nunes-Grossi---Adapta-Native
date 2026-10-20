@@ -180,7 +180,6 @@ Legenda de status: ☐ a fazer · ◐ em andamento · ☑ concluída · ⛔ bloq
 |---|---|---|---|---|---|---|---|
 | T1.01 | Auditar o tronco (sem alterar nada); registro em `06_notas/2026-10-20-auditoria-do-tronco.md` | Maestro (conduzido pela Louise) | SPEC-1-001 | CA-1-04 | RED + consultas de conferência | 23/10 | ☑ |
 | T1.02 | Corrigir as lacunas estruturais e escrever `docs/mapa-do-tronco.md` | Maestro | SPEC-1-001 | CA-1-01, 02, 03 | GREEN + REGRESSÃO | 23/10 | ☐ |
-| T4.00 | Revisar J6 (Isabelle) e J3 (Sheyla) em Configurações → Fluxos | Isabelle, Sheyla | SPEC-1-004 | Anotações entregues | — | 23/10 | ☐ |
 
 ### Leva 2 — Galhos: segurança e clientes
 
@@ -197,7 +196,7 @@ Legenda de status: ☐ a fazer · ◐ em andamento · ☑ concluída · ⛔ bloq
 
 | ID | Task | Dono | SPEC | Critério | Recorte da prova | Prazo | Status |
 |---|---|---|---|---|---|---|---|
-| T4.01 | Conferir e corrigir J6, J3 e genérico; completar a página Fluxos | Maestro | SPEC-1-004 | CA-1-18 | RED → GREEN | 27/10 | ☐ |
+| T4.01 | Conferir e corrigir J6, J3 e genérico com os fluxos piloto; completar a página Fluxos (só consulta) | Maestro | SPEC-1-004 | Conferência com os fluxos piloto | RED → GREEN | 27/10 | ☐ |
 | T4.02 | Abertura de oportunidade como operação única no banco | Maestro | SPEC-1-004 | CA-1-14, 15, 16, 17 | GREEN + REGRESSÃO | 28/10 | ☐ |
 | T5.01 | Itens do checklist e bloqueio de obrigatórios no banco | Maestro | SPEC-1-005 | CA-1-19 | RED → GREEN | 28/10 | ☐ |
 | T5.02 | Concluir, voltar e assumir; passagem; notificações | Maestro | SPEC-1-005 | CA-1-20, 21 | GREEN | 28/10 | ☐ |
@@ -211,6 +210,13 @@ Legenda de status: ☐ a fazer · ◐ em andamento · ☑ concluída · ⛔ bloq
 | T6.01 | Minha fila e lista com busca, filtros e CSV | Maestro | SPEC-1-006 | CA-1-24, 26 | GREEN | 29/10 | ☐ |
 | T6.02 | Quadro por modelo de fluxo | Maestro | SPEC-1-006 | CA-1-25 | GREEN | 29/10 | ☐ |
 | T6.03 | Painel inicial com contas no banco | Maestro | SPEC-1-006 | CA-1-27 | GREEN + REGRESSÃO | 29/10 | ☐ |
+
+### Leva 4b — Revisão dos fluxos pela equipe
+
+| ID | Task | Dono | SPEC | Critério | Recorte da prova | Prazo | Status |
+|---|---|---|---|---|---|---|---|
+| T4.00 | Revisar J6 (Isabelle) e J3 (Sheyla) em Configurações → Fluxos | Isabelle, Sheyla | SPEC-1-004 | Anotações entregues | — | 29/10 | ☐ |
+| T4.03 | Aplicar a revisão de Isabelle e Sheyla nos modelos J6 e J3 | Maestro | SPEC-1-004 | CA-1-18 | GREEN | 30/10 | ☐ |
 
 ### Leva 5 — Ensaio real e aceite
 
@@ -230,7 +236,7 @@ Legenda de status: ☐ a fazer · ◐ em andamento · ☑ concluída · ⛔ bloq
 |---|---|---|---|---|
 | D-01 | Papel do Vinícius | Viviane | 20/10 | T2.01 |
 | D-03 | Visibilidade entre Seguros e Saúde | Viviane | 20/10 | T2.02 |
-| D-09 | Revisão de J6 e J3 | Isabelle, Sheyla | 23/10 | T4.01 |
+| D-09 | Revisão de J6 e J3 | Isabelle, Sheyla | 29/10 | T4.03 |
 | D-11 | Quem faz documentação e digitação em Saúde | Viviane + Isabelle | 23/10 | T4.01 |
 | D-12 | Dados de saúde: só “sim/não” e “entregue” | Viviane | 20/10 | Prompt 6, T4.01 |
 | D-18 | Supabase Pro | Viviane | 30/10 | T7.05 |
