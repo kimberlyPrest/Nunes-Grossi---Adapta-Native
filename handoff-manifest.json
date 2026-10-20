@@ -5,11 +5,11 @@
     "adapta": "0.7.0",
     "adaptaCliente": "0.7.0"
   },
-  "generatedAt": "2026-10-20T13:51:35.659Z",
+  "generatedAt": "2026-10-20T13:59:52.786Z",
   "files": [
     {
       "path": "04_fase-atual/fase.md",
-      "sha256": "1e770d1dc97ebcbe6506b0f035be92208cf015cc3a17885b4bf1b7a510342c2b",
+      "sha256": "7455f5d3706672579ad09ea2d3442cf238c340b2e53b983b2d24b9e39d08ee2d",
       "classification": "fase-atual"
     },
     {
@@ -19,12 +19,12 @@
     },
     {
       "path": "04_fase-atual/specs/SPEC-1-001-tronco-auditado.md",
-      "sha256": "7fa42f6b912d8d1e599269fc2ef3909515d4e4b1048506bae554fbe182980521",
+      "sha256": "bad3ff4f8081bcf999d68c0d9ce98f224d3b14d3e379e6e084ff0d3c7c3b45ff",
       "classification": "spec-fase-atual"
     },
     {
       "path": "04_fase-atual/specs/SPEC-1-002-acesso-e-seguranca.md",
-      "sha256": "5f513aaff23d48124d91ae1cd2c17ff2cb27e281b1542fbb72141604686c37db",
+      "sha256": "31a467ec710738a10df6744ed34e0f442258b654f53e09bf04c81fa290b9ae52",
       "classification": "spec-fase-atual"
     },
     {
@@ -34,12 +34,12 @@
     },
     {
       "path": "04_fase-atual/specs/SPEC-1-004-fluxos-e-abertura.md",
-      "sha256": "8fa6d2e5e8a8c4cd229959a21fafa5e9174dc546047067ebd7898ba6c4c700d1",
+      "sha256": "62f53544a1005a4ebb27da0870998abaca9a498ce1aa87b80b69e3c118297aff",
       "classification": "spec-fase-atual"
     },
     {
       "path": "04_fase-atual/specs/SPEC-1-005-execucao-do-fluxo.md",
-      "sha256": "cc28b781000ddfe4e2855cbf4a6b3e35b1875c31940ca10a05305a0be5777828",
+      "sha256": "97c3933b6ebbeaae697abf91cfe8bf7626fadffa6099ebbae2ecf7f3dc5dae5b",
       "classification": "spec-fase-atual"
     },
     {
