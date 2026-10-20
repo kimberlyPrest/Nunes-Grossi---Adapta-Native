@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-20 — Tronco concluído e auditado
+
+- Prompts 1 a 10 do tronco enviados pela Louise (T0.00 a T0.10).
+- Auditoria do tronco (T1.01) registrada em `06_notas/2026-10-20-auditoria-do-tronco.md`: dados iniciais conferem; 6 lacunas estruturais para a T1.02.
+- Etapa 10 do fluxo Saúde PME ajustada pela N&G durante o tronco, aceita como está.
+- Repositório de código incluído como submódulo em `05_entregas/central-do-fluxo-comercial`.
+
 ## 2026-10-16 — 2ª Consultoria
 
 - Transcrição da 2ª consultoria em `02_reunioes/2026-10-16-2a-consultoria/`.

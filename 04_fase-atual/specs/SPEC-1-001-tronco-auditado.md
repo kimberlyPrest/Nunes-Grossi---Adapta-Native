@@ -1,7 +1,7 @@
 # SPEC-1-001 — Tronco criado, auditado e mapeado
 
 **Fase:** 1 — Primeira jornada viva
-**Status:** planejada
+**Status:** em andamento (auditoria concluída em 20/10/2026; falta a T1.02)
 **Dono:** Louise (prompts, condução da auditoria no Maestro e testes) · Maestro (auditoria e correções)
 **Origem:** `04_fase-atual/fase.md` (sequência de construção, itens 1 a 6) e `01_projeto/constituicao.md`
 **Degrau da solução:** nativo da plataforma: o Skip gera telas e banco a partir dos prompts do tronco; o Maestro só confere e completa o que faltou
@@ -83,11 +83,11 @@ Dados iniciais esperados: 2 equipes; 8 seguradoras; 14 produtos; 8 origens; 9 mo
 
 ## Checklist de execução
 
-- [ ] Passo 0 concluído: Supabase conectado ao projeto Skip.
-- [ ] Prompts 1 a 10 enviados, cada um com a conferência rápida feita.
-- [ ] Observações do tronco registradas no arquivo de prompts.
+- [x] Passo 0 concluído: Supabase conectado ao projeto Skip.
+- [x] Prompts 1 a 10 enviados, cada um com a conferência rápida feita.
+- [x] Observações do tronco registradas no arquivo de prompts.
 - [ ] `docs/mapa-do-tronco.md` criado no repositório de código.
-- [ ] Lacunas estruturais confirmadas pela Louise.
+- [x] Lacunas estruturais confirmadas (`06_notas/2026-10-20-auditoria-do-tronco.md`).
 - [ ] Lacunas estruturais corrigidas e mapa atualizado.
 
 ## Critérios de aceite
@@ -115,22 +115,22 @@ lista de tabelas e colunas do esquema público; lista de pastas de arquivos.
 
 | ID | Task | Dono | SPEC | Checklist/aceite | Recorte da prova | Status |
 |---|---|---|---|---|---|---|
-| T0.00 | Passo 0 — conectar o Supabase ao projeto Skip | Louise | SPEC-1-001 | Checklist item 1 | Supabase aparece conectado nas configurações do Skip | ☐ |
-| T0.01 | Prompt 1 — Estrutura e navegação | Louise | SPEC-1-001 | Conferência rápida P1 | — | ☐ |
-| T0.02 | Prompt 2 — Usuários, perfis, equipes e funções | Louise | SPEC-1-001 | Conferência rápida P2 | — | ☐ |
-| T0.03 | Prompt 3 — Clientes e contatos | Louise | SPEC-1-001 | Conferência rápida P3 | — | ☐ |
-| T0.04 | Prompt 4 — Catálogo | Louise | SPEC-1-001 | Conferência rápida P4 | — | ☐ |
-| T0.05 | Prompt 5 — Estrutura dos fluxos + genérico + Empresarial | Louise | SPEC-1-001 | Conferência rápida P5 | — | ☐ |
-| T0.06 | Prompt 6 — Fluxo Saúde PME 3–29 | Louise | SPEC-1-001 | Conferência rápida P6 | — | ☐ |
-| T0.07 | Prompt 7 — Nova oportunidade | Louise | SPEC-1-001 | Conferência rápida P7 | — | ☐ |
-| T0.08 | Prompt 8 — Ficha da oportunidade | Louise | SPEC-1-001 | Conferência rápida P8 | — | ☐ |
-| T0.09 | Prompt 9 — Movimento | Louise | SPEC-1-001 | Conferência rápida P9 | — | ☐ |
-| T0.10 | Prompt 10 — Visões e painel | Louise | SPEC-1-001 | Conferência rápida P10 | — | ☐ |
-| T1.01 | Auditar o tronco e escrever o mapa (sem alterar nada) | Maestro (conduzido pela Louise) | SPEC-1-001 | CA-1-04 (mapa e lacunas) | RED + GREEN parcial: consultas de conferência registradas | ☐ |
+| T0.00 | Passo 0 — conectar o Supabase ao projeto Skip | Louise | SPEC-1-001 | Checklist item 1 | Supabase aparece conectado nas configurações do Skip | ☑ |
+| T0.01 | Prompt 1 — Estrutura e navegação | Louise | SPEC-1-001 | Conferência rápida P1 | — | ☑ |
+| T0.02 | Prompt 2 — Usuários, perfis, equipes e funções | Louise | SPEC-1-001 | Conferência rápida P2 | — | ☑ |
+| T0.03 | Prompt 3 — Clientes e contatos | Louise | SPEC-1-001 | Conferência rápida P3 | — | ☑ |
+| T0.04 | Prompt 4 — Catálogo | Louise | SPEC-1-001 | Conferência rápida P4 | — | ☑ |
+| T0.05 | Prompt 5 — Estrutura dos fluxos + genérico + Empresarial | Louise | SPEC-1-001 | Conferência rápida P5 | — | ☑ |
+| T0.06 | Prompt 6 — Fluxo Saúde PME 3–29 | Louise | SPEC-1-001 | Conferência rápida P6 | — | ☑ |
+| T0.07 | Prompt 7 — Nova oportunidade | Louise | SPEC-1-001 | Conferência rápida P7 | — | ☑ |
+| T0.08 | Prompt 8 — Ficha da oportunidade | Louise | SPEC-1-001 | Conferência rápida P8 | — | ☑ |
+| T0.09 | Prompt 9 — Movimento | Louise | SPEC-1-001 | Conferência rápida P9 | — | ☑ |
+| T0.10 | Prompt 10 — Visões e painel | Louise | SPEC-1-001 | Conferência rápida P10 | — | ☑ |
+| T1.01 | Auditar o tronco e escrever o mapa (sem alterar nada) | Maestro (conduzido pela Louise) | SPEC-1-001 | CA-1-04 (mapa e lacunas) | RED + GREEN parcial: consultas de conferência registradas | ☑ |
 | T1.02 | Corrigir as lacunas estruturais e atualizar o mapa | Maestro | SPEC-1-001 | CA-1-01, CA-1-02, CA-1-03 | GREEN + REGRESSÃO | ☐ |
 
 ## Emendas
 
 | Data | Origem do sinal | Micro-spec/task | Motivo |
 |---|---|---|---|
-| | | | |
+| 20/10/2026 | Auditoria do tronco | — | Etapa 10 do Saúde PME ajustada pela N&G durante o tronco (responsável comercial, 3 itens condicionais); aceita como está |

@@ -402,4 +402,4 @@ com o que foi feito nos testes → exportar CSV baixa um arquivo.
 
 | Prompt | O que ficou diferente ou faltou | Corrigido na hora? |
 |---|---|---|
-| | | |
+| 6 | Etapa 10 (Cancelamento do plano anterior) ajustada pela equipe: fica com o responsável comercial e tem 3 itens condicionais (plano anterior ativo?, já cancelado?, orientação/carta de cancelamento) | Sim — alteração da N&G, aceita |
