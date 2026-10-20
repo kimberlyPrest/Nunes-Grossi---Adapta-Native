@@ -5,11 +5,11 @@
     "adapta": "0.7.0",
     "adaptaCliente": "0.7.0"
   },
-  "generatedAt": "2026-10-20T13:34:45.728Z",
+  "generatedAt": "2026-10-20T13:43:06.588Z",
   "files": [
     {
       "path": "04_fase-atual/fase.md",
-      "sha256": "10e95a42c8de83650a24e5761c585282f2519522c5f3e2c501b07b506e0eb19d",
+      "sha256": "6e992fa2db25400bb01acf4f1426a7ac82b658fb1476462ffe77ae6a9d38eaf1",
       "classification": "fase-atual"
     },
     {
@@ -39,7 +39,7 @@
     },
     {
       "path": "04_fase-atual/specs/SPEC-1-005-execucao-do-fluxo.md",
-      "sha256": "b5bcbbe50a0d900d28cddfaf646c848a8a15ee525296180bea5b400112e65095",
+      "sha256": "cc28b781000ddfe4e2855cbf4a6b3e35b1875c31940ca10a05305a0be5777828",
       "classification": "spec-fase-atual"
     },
     {

@@ -39,9 +39,9 @@ avança, perda sempre tem motivo e tudo fica registrado na linha do tempo.
 4. **Passagem:** próxima etapa vira atual; responsável = responsável comercial **ou** fila (equipe + função); notificação para o responsável ou para todos da fila.
 5. **Assumir:** pessoa da fila assume; a etapa passa a ter responsável; os demais da fila veem que foi assumida.
 6. **Voltar etapa:** motivo obrigatório; a etapa anterior volta a ser atual, com o mesmo responsável que a concluiu.
-7. **Ganho:** concluir a etapa marcada como de ganho abre a confirmação (seguradora, valor fechado, nº da proposta, todos obrigatórios); situação → “Ganha — em finalização”; as etapas seguintes continuam.
+7. **Ganho:** concluir a etapa marcada como de ganho abre a confirmação (seguradora, valor fechado, nº da proposta, todos obrigatórios); situação → “Ganha — em finalização”; a oportunidade grava a **data do ganho**; as etapas seguintes continuam.
 8. **Conclusão:** concluir a última etapa → “Concluída”. Se a última etapa vier antes de passar por uma etapa de ganho (fluxo sem etapa de ganho), pede a confirmação de ganho nesse momento.
-9. **Perda:** em qualquer etapa, com motivo (lista de perda) e observação obrigatórios; situação → “Perdida”; nenhuma etapa fica atual.
+9. **Perda:** em qualquer etapa, com motivo (lista de perda) e observação obrigatórios; situação → “Perdida”; a oportunidade grava a **data da perda**; nenhuma etapa fica atual.
 10. **Histórico:** gravado pelo banco em toda mudança de etapa, responsável, situação, valor, item, documento e interação, com usuário e data/hora.
 
 | Cenário | Dado/condição | Resultado esperado | Caminho de erro/recuperação |
@@ -59,6 +59,7 @@ avança, perda sempre tem motivo e tudo fica registrado na linha do tempo.
 - [ ] Concluir, voltar (com motivo) e assumir como operações únicas no banco.
 - [ ] Notificações para pessoa e fila; sino com marcar como lida.
 - [ ] Ganho na etapa de ganho, conclusão na última, perda com motivo.
+- [ ] Data do ganho e data da perda gravadas na oportunidade (campos próprios), com as oportunidades já ganhas ou perdidas preenchidas a partir da linha do tempo.
 - [ ] Histórico automático e linha do tempo completa.
 - [ ] Interações registradas.
 
@@ -67,7 +68,7 @@ avança, perda sempre tem motivo e tudo fica registrado na linha do tempo.
 - [ ] **CA-1-19:** A etapa “Documentação para implantação” da J6 não conclui sem o cartão CNPJ (teste de aceite 6).
 - [ ] **CA-1-20:** Ao concluir a etapa 11 (ganho) da J6, a etapa 12 cai na fila Saúde/Pós-venda com aviso no sino de quem é dessa fila; a pessoa assume e conclui (teste de aceite 8).
 - [ ] **CA-1-21:** Voltar etapa exige motivo, e ele aparece na linha do tempo (teste de aceite 9).
-- [ ] **CA-1-22:** Perda sem motivo não é aceita (teste de aceite 10); ganho exige seguradora, valor e nº da proposta.
+- [ ] **CA-1-22:** Perda sem motivo não é aceita (teste de aceite 10); ganho exige seguradora, valor e nº da proposta; a oportunidade ganha mostra a data do ganho e a perdida, a data da perda.
 - [ ] **CA-1-23:** Uma J3 e uma J6 chegam a “Concluída”, e a linha do tempo mostra cada passo com pessoa e horário.
 
 ## TDD da SPEC
@@ -88,7 +89,7 @@ avança, perda sempre tem motivo e tudo fica registrado na linha do tempo.
 |---|---|---|---|---|---|---|
 | T5.01 | Itens do checklist (3 tipos, documento ligado ao item) e bloqueio de obrigatórios no banco | Maestro | SPEC-1-005 | CA-1-19 | RED → GREEN do teste da etapa 6 | ☐ |
 | T5.02 | Concluir, voltar e assumir como operações no banco; passagem para pessoa ou fila; notificações e sino | Maestro | SPEC-1-005 | CA-1-20, CA-1-21 | GREEN da fila do pós-venda + teste do assumir duplicado | ☐ |
-| T5.03 | Etapa de ganho, conclusão, perda com motivo e arquivar | Maestro | SPEC-1-005 | CA-1-22 | GREEN de ganho e perda | ☐ |
+| T5.03 | Etapa de ganho, conclusão, perda com motivo e arquivar; data do ganho e data da perda | Maestro | SPEC-1-005 | CA-1-22 | GREEN de ganho e perda, com as datas gravadas | ☐ |
 | T5.04 | Histórico automático, linha do tempo completa e interações | Maestro | SPEC-1-005 | CA-1-23 | REGRESSÃO: J3 e J6 até “Concluída” | ☐ |
 
 ## Emendas
@@ -96,3 +97,4 @@ avança, perda sempre tem motivo e tudo fica registrado na linha do tempo.
 | Data | Origem do sinal | Micro-spec/task | Motivo |
 |---|---|---|---|
 | 20/10/2026 | Auditoria do tronco | CA-1-20 | A etapa 10 da J6 passou para o responsável comercial (ajuste da N&G); a passagem para a fila do pós-venda é testada na etapa 12 |
+| 20/10/2026 | Auditoria do tronco | T5.03, CA-1-22 | O tronco não grava data do ganho nem data da perda (só na linha do tempo); a SPEC-1-006 usa essas datas no Painel |

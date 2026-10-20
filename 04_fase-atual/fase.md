@@ -201,7 +201,7 @@ Legenda de status: ☐ a fazer · ◐ em andamento · ☑ concluída · ⛔ bloq
 | T4.02 | Abertura de oportunidade como operação única no banco | Maestro | SPEC-1-004 | CA-1-14, 15, 16, 17 | GREEN + REGRESSÃO | 28/10 | ☐ |
 | T5.01 | Itens do checklist e bloqueio de obrigatórios no banco | Maestro | SPEC-1-005 | CA-1-19 | RED → GREEN | 28/10 | ☐ |
 | T5.02 | Concluir, voltar e assumir; passagem; notificações | Maestro | SPEC-1-005 | CA-1-20, 21 | GREEN | 28/10 | ☐ |
-| T5.03 | Ganho, conclusão, perda com motivo e arquivar | Maestro | SPEC-1-005 | CA-1-22 | GREEN | 29/10 | ☐ |
+| T5.03 | Ganho, conclusão, perda com motivo e arquivar; data do ganho e da perda | Maestro | SPEC-1-005 | CA-1-22 | GREEN | 29/10 | ☐ |
 | T5.04 | Histórico automático, linha do tempo e interações | Maestro | SPEC-1-005 | CA-1-23 | REGRESSÃO | 29/10 | ☐ |
 
 ### Leva 4 — Galhos: visões

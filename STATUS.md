@@ -10,7 +10,7 @@
 
 ## Próximos passos
 
-1. T1.02: corrigir as 7 lacunas estruturais da auditoria e criar o `docs/mapa-do-tronco.md` no repositório de código.
+1. T1.02: corrigir as 6 lacunas estruturais da auditoria e criar o `docs/mapa-do-tronco.md` no repositório de código.
 2. Seguir para as SPECs dos galhos (SPEC-1-002 em diante) com "execute a próxima task".
 3. Viviane responder D-01, D-03 e D-12 (`01_projeto/decisoes.md`).
 
