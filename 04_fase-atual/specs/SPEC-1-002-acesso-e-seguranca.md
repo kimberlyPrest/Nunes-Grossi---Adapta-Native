@@ -74,9 +74,9 @@ excluir clientes ou oportunidades definitivamente.
 
 ## Critérios de aceite
 
-- [ ] **CA-1-05:** Entrando como colaborador, as telas Usuários e Configurações não aparecem no menu e, acessadas pelo endereço direto, mostram “sem acesso”.
-- [ ] **CA-1-06:** Um colaborador de Seguros não consegue abrir, nem pelo endereço direto, uma oportunidade de Saúde em que não participa, nem baixar os documentos dela.
-- [ ] **CA-1-07:** Não existe forma (tela ou chamada direta) de excluir cliente ou oportunidade; arquivar só aparece para administrador e gestor.
+- [x] **CA-1-05:** Entrando como colaborador, as telas Usuários e Configurações não aparecem no menu e, acessadas pelo endereço direto, mostram “sem acesso”. *(28/10: menu filtrado por perfil; `/usuarios`, `/configuracoes/fluxos` e `/configuracoes/catalogo` mostram `SemAcesso` em vez de redirecionar; rota `/sem-acesso` fora do `AdminRoute` para não entrar em laço. Testado por Pedro nos perfis colaborador, gestor e administrador — commits `a296741`..`0628086`, v0.0.38.)*
+- [x] **CA-1-06:** Um colaborador de Seguros não consegue abrir, nem pelo endereço direto, uma oportunidade de Saúde em que não participa, nem baixar os documentos dela. *(27/10: ficha negada por endereço direto; Storage com `pode_ver_oportunidade` no caminho do arquivo — colaborador de Seguros = `false`; commits `f9bff45` + `9641bfb`.)*
+- [x] **CA-1-07:** Não existe forma (tela ou chamada direta) de excluir cliente ou oportunidade; arquivar só aparece para administrador e gestor. *(27/10: 0 políticas de DELETE nas 8 tabelas verificadas + DELETE como `authenticated` afetou 0 linhas; botão Arquivar oculto ao colaborador — commit `1a02acd`.)*
 - [ ] **CA-1-08:** Usuário desativado não consegue entrar e some da lista de responsáveis.
 - [ ] **CA-1-09:** Todas as tabelas do mapa têm regras de acesso ativas (conferido pela consulta de verificação).
 
@@ -96,10 +96,10 @@ excluir clientes ou oportunidades definitivamente.
 
 | ID | Task | Dono | SPEC | Checklist/aceite | Recorte da prova | Status |
 |---|---|---|---|---|---|---|
-| T2.01 | Completar a tela de usuários (convidar, editar, desativar/reativar, bloqueio de inativo) e criar os 4 usuários de teste | Maestro | SPEC-1-002 | CA-1-08 | GREEN: teste do inativo | ☐ |
-| T2.02 | Aplicar as regras de acesso por perfil, equipe e função em todas as tabelas e bloquear exclusões | Maestro | SPEC-1-002 | CA-1-06, CA-1-07, CA-1-09 | RED → GREEN: consulta de verificação + teste do colaborador Seguros | ☐ |
-| T2.03 | Tornar a pasta de documentos privada, com regra por oportunidade e link temporário | Maestro | SPEC-1-002 | CA-1-06 (parte documentos) | GREEN: download negado para o colaborador de outra equipe | ☐ |
-| T2.04 | Ajustar menus e rotas por perfil, com tela de “sem acesso”, e rodar a regressão | Maestro | SPEC-1-002 | CA-1-05 | GREEN + REGRESSÃO | ☐ |
+| T2.01 | Completar a tela de usuários (convidar, editar, desativar/reativar, bloqueio de inativo) e criar os 4 usuários de teste | Maestro | SPEC-1-002 | CA-1-08 | GREEN: teste do inativo | ☑ 26/10 |
+| T2.02 | Aplicar as regras de acesso por perfil, equipe e função em todas as tabelas e bloquear exclusões | Maestro | SPEC-1-002 | CA-1-06, CA-1-07, CA-1-09 | RED → GREEN: consulta de verificação + teste do colaborador Seguros | ☑ 27/10 |
+| T2.03 | Tornar a pasta de documentos privada, com regra por oportunidade e link temporário | Maestro | SPEC-1-002 | CA-1-06 (parte documentos) | GREEN: download negado para o colaborador de outra equipe | ☑ 27/10 |
+| T2.04 | Ajustar menus e rotas por perfil, com tela de “sem acesso”, e rodar a regressão | Maestro | SPEC-1-002 | CA-1-05 | GREEN + REGRESSÃO | ☑ 28/10 |
 
 ## Emendas
 

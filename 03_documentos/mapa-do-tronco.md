@@ -1,6 +1,6 @@
 # Mapa do tronco — Central do Fluxo Comercial N&G
 
-**Atualizado em:** 20/10/2026 · **Base:** repositório de código, commit `afe8fff` (v0.0.13), depois da T1.02
+**Atualizado em:** 20/10/2026 · **Base:** repositório de código, commit `afe8fff` (v0.0.13), depois da T1.02 · **T2.01 aplicada em cima (bloqueio server-side do inativo — ver seção própria)**
 **Para quem:** Maestro e consultoria. **Este mapa é a verdade sobre nomes de telas, tabelas e campos.**
 Antes de mudar qualquer coisa, confira aqui; depois de mudar, atualize este arquivo.
 
@@ -87,7 +87,7 @@ CPF e CNPJ são únicos (índice), sem validação de dígito ainda (SPEC-1-003)
 | `notificacoes` | titulo, mensagem, link, lida, lida_em | destinatario_id → profiles; oportunidade_id |
 | `oportunidades_protocolo_seq` | ano, ultimo_numero | — |
 
-**Pasta de arquivos:** bucket privado `oportunidades-anexos` (até 50 MB por arquivo); download por link temporário de 1 hora.
+**Pasta de arquivos:** bucket privado `oportunidades-anexos` (até 50 MB por arquivo). Leitura, envio e alteração exigem `pode_ver_oportunidade` sobre a oportunidade do caminho (`{oportunidade_id}/…`); exclusão de objeto não existe (RN-06). Download por link temporário de **5 minutos** (T2.03).
 
 ## Funções no banco
 
@@ -123,6 +123,43 @@ responsável comercial por ajuste da N&G; etapa 12 na fila Saúde e Odonto / Pó
 | 4 | Vários arquivos por item | tabela `oportunidades_documentos`; anexar sempre adiciona |
 | 5 | Origem do cliente ligada à lista | `clientes.origem_id`; clientes antigos migrados (sem correspondência → "Outro" + texto nas observações) |
 | 6 | Ativo/inativo em origens e motivos | `origens_lead.situacao`, `motivos.situacao` |
+
+### Ajustes da T2.01 (bloqueio server-side do usuário inativo)
+
+| # | Ajuste | Onde ficou |
+|---|---|---|
+| 1 | Desativar usuário agora **bane em `auth.users` e revoga os refresh tokens** — o inativo não entra mais e a sessão aberta morre na renovação; antes o bloqueio era só no frontend | Migração `supabase/migrations/20261020110000_t201_bloqueio_inativo.sql`: trigger `trg_profiles_situacao_login_ban` → função `handle_situacao_login_ban` (vale para qualquer caminho que grave `situacao = 'inativo'`; reativar remove o ban) |
+| 2 | Edge function `admin-users`: `toggle_status` também bane/desbane via API de admin e revoga sessões (defesa em profundidade); `update` **não aceita mais `situacao`** — mudança de situação só pelo toggle | `supabase/functions/admin-users/index.ts` |
+| 3 | Frontend sem fallbacks de identidade/perfil: nome de exibição nunca mais cai em nome real fixo; perfil vem só do banco; sem perfil carregado o usuário é tratado como inativo (não entra) | `src/hooks/use-auth.tsx` |
+| 4 | `situacao` removida do tipo de update do frontend (`UpdateUserInput`) e do fallback de update em `src/services/usuarios.ts` | `src/types/usuarios.ts`, `src/services/usuarios.ts` |
+
+## Matriz de acesso (T2.02 — regras aplicadas no banco)
+
+Migração `supabase/migrations/20261026220000_t202_regras_de_acesso.sql`. Verificação: view
+`public.verificacao_regras_de_acesso` (deve voltar vazia — nenhuma tabela do domínio com DELETE
+ativo ou sem política).
+
+| Tabela(s) | Ler | Criar | Alterar | Excluir |
+|---|---|---|---|---|
+| `oportunidades` | admin: todas · gestor: das suas equipes + as dele · colaborador: responsável comercial, etapas que já foi/é responsável, fila da sua equipe+função (`pode_ver_oportunidade`) | qualquer ativo (app usa `abrir_oportunidade`) | admin · gestor da equipe · responsável comercial (dados básicos das suas) | **ninguém** |
+| `oportunidades_etapas` | quem vê a oportunidade | quem vê (app usa funções) | admin · gestor da equipe · responsável atual da etapa | **ninguém** |
+| `oportunidades_checklist_itens` | quem vê a oportunidade | quem vê | quem vê a oportunidade (bloqueio de obrigatórios na T5.01) | **ninguém** |
+| `oportunidades_interacoes` | quem vê a oportunidade | quem vê | só o autor | **ninguém** |
+| `oportunidades_linha_tempo` | quem vê a oportunidade | sistema/quem vê | **ninguém** (imutável, RN-07) | **ninguém** |
+| `oportunidades_documentos` | quem vê a oportunidade | quem vê | só o autor | ninguém |
+| `storage.objects` (bucket `oportunidades-anexos`) | quem vê a oportunidade do caminho | quem vê a oportunidade | quem vê a oportunidade | **ninguém** (T2.03) |
+| `clientes` | qualquer ativo | qualquer ativo | admin · gestor · responsável comercial | **ninguém** (arquivar: admin/gestor/responsável) |
+| `clientes_contatos` | qualquer ativo | qualquer ativo | admin · gestor · responsável comercial do cliente | **ninguém** |
+| catálogo (`seguradoras_operadoras`, `produtos`, `origens_lead`, `motivos`) | qualquer ativo | admin | admin | **ninguém** |
+| fluxos (`fluxo_modelos`, `fluxo_etapas`, `fluxo_checklist_itens`) | qualquer ativo | admin | admin | **ninguém** |
+| `notificacoes` | só as próprias | sistema/quem vê | só o dono (marcar lida) | — |
+| `profiles` / `equipes` / `profile_equipes` | revisado na T2.01 | admin | admin | dívida registrada: DELETE físico em profiles (RN-06) |
+
+- **D-03 (sem resposta → proposta da consultoria aplicada):** o colaborador de uma equipe vê na
+  lista do cliente que existem oportunidades de outra equipe (produto, situação, responsável), mas
+  não abre a ficha nem os documentos — é exatamente o que `pode_ver_oportunidade` devolve hoje.
+- Funções de movimento (`abrir_oportunidade`, `concluir/assumir/voltar/ganho/perda/arquivar`,
+  `marcar_notificacoes_lidas`) são `SECURITY DEFINER` e continuam valendo com as políticas restritas.
 
 ### Pendências menores da T1.02 (ajustar na SPEC indicada)
 
