@@ -24,6 +24,6 @@
 ## Desdobramento útil
 
 A confusão produziu o melhor teste do ciclo: comparar **lista e CSV nos dois perfis**. O item que
- eu havia classificado como "não testável" virou a prova central. Registrar isso evita que, numa
+eu havia classificado como "não testável" virou a prova central. Registrar isso evita que, numa
 próxima vez, eu trate um número baixo como limitação antes de perguntar em qual perfil ele foi
 observado.
