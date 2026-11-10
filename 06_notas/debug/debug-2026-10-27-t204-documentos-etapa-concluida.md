@@ -1,7 +1,5 @@
 # Debug — T2.04 · documentos de etapa concluída sem download
 
-**Data:**  download — T2.04 · documentos de etapa concluída sem download
-
 **Data:** 27/10/2026 · **Task:** T2.04 · **Reportado por:** Pedro (teste humano, item 6 da regressão)
 
 ## Sintoma
@@ -27,7 +25,8 @@ de uma etapa sai da tela editável assim que a etapa fecha, todo documento de et
 ficava órfão — a T2.03 provou que o Storage e as políticas funcionam, mas não havia caminho de
 UI até eles depois do fechamento.
 
-Não é regressão da T2.04: o defeito é anterior e só apareceu porque a T2.03 passou a exigir link assinado, tornando visível que a tela de leitura não tinha ação alguma.
+Não é regressão da T2.04: o defeito é anterior e só apareceu porque a T2.03 passou a exigir
+link assinado, tornando visível que a tela de leitura não tinha ação alguma.
 
 ## Correção
 

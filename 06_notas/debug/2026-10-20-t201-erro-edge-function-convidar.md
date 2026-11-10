@@ -32,7 +32,7 @@ configurado no projeto da N&G); (b) autorização do chamador (401/403); (c) e-m
 
 - `src/services/usuarios.ts`: novo helper `extrairErroEdge()` que lê o corpo JSON do
   `FunctionsHttpError` (via `error.json()` ou `error.context.json()`) e devolve a mensagem real;
-  aplicado em `inviteUser`, `updateUser` and toggleUserStatus.
+  aplicado em `inviteUser`, `updateUser` e `toggleUserStatus`.
 - Removidos os **fallbacks diretos ao banco** em `updateUser` e `toggleUserStatus`: eles escondiam
   falhas da função (o toggle precisa do ban/revogação em `auth.users`, que só a função/trigger
   garante — cair no banco silenciosamente mascararia exatamente o tipo de problema visto agora).

@@ -50,7 +50,7 @@ confirmar, o modal fecha e **nada acontece, sem mensagem de erro**.
 2. **Regra de negócio na camada errada:** a política de UPDATE de `clientes` (migração 20261026220000)
    permite o responsável comercial alterar a linha (para editar dados) — e o colaborador de teste
    **é** o responsável comercial do cliente. Resultado: o botão aparecia, o banco recusava a mudança
-   de situação, e o erro era engolido by item 1.
+   de situação, e o erro era engolido pelo item 1.
 
 **Correção aplicada (commit 04b1ee8):**
 - `toggleClienteSituacao` passou a usar `.select('id')` e a tratar `data.length === 0` como falha,

@@ -8,7 +8,8 @@
   mensagem real da edge function — prova de que o frontend do commit `64850af` está publicado.
 - A lista mostra **4 usuários** (incluindo viviane@corretorang.com.br, Administrador) — o caminho de
   convite funcionou após a publicação.
-- **Sintoma**
+
+## Sintoma
 
 Administrador clica em Desativar no usuário "colaborador seguros" (louise.corretorang@gmail.com) →
 banner vermelho "Erro ao alterar situação — Não foi possível alterar a situação do usuário."
@@ -38,7 +39,7 @@ Ainda não aplicada — aguardando o texto exato do erro (uma hipótese e uma co
 Correções candidatas conforme a evidência:
 - Se falhar em `auth.refresh_tokens`: mover a revogação de sessões para a edge function (que já faz
   via `auth.admin.signOut`) e deixar no trigger só o ban em `auth.users` (ou proteger com EXCEPTION
-  sem esconder the ban).
+  sem esconder o ban).
 - Se falhar em `auth.users`: reavaliar o caminho do ban (manter apenas via API de admin na edge
   function, que é o caminho suportado) e simplificar o trigger.
 - Se o trigger não existir: investigar logs da edge function e a aplicação da migração no Skip.

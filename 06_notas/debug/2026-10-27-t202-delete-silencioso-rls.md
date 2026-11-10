@@ -78,7 +78,10 @@ WITH d AS (DELETE FROM public.clientes_contatos
             WHERE id IN (SELECT id FROM public.clientes_contatos LIMIT 1) RETURNING 1)
 INSERT INTO _t202 SELECT 2, 'apagadas', 'clientes_contatos', count(*) FROM d;
 
-INSERT INTO _t202 FROM public.oportunidades;  -- placeholder
+INSERT INTO _t202 SELECT 3, 'depois',   'oportunidades',     count(*) FROM public.oportunidades;
+INSERT INTO _t202 SELECT 3, 'depois',   'clientes_contatos', count(*) FROM public.clientes_contatos;
+
+SELECT etapa, tabela, qtd FROM _t202 ORDER BY ordem, tabela;
 ROLLBACK;
 ```
 
@@ -93,15 +96,16 @@ WHERE schemaname = 'public' AND cmd = 'DELETE' ORDER BY tablename;
 
 ## Lição 2
 
-O SQL editor do Supa base do Supabase exibe **somente o resultado da ÚLTIMA instrução**. Qualquer verificação precisa
+O SQL editor do Supabase exibe **somente o resultado da ÚLTIMA instrução**. Qualquer verificação precisa
 terminar numa única consulta consolidada (tabela temporária + um `SELECT` final), nunca em comparações
 espalhadas por vários `SELECT`.
 
 ## Terceiro teste — bloqueado por aviso do editor (CREATE TABLE sem RLS)
 
 O editor do Supabase abriu o modal "Potential issue detected: creates a table without enabling Row
-Level Security" por causa do "CREATE TEMP TABLE". O aviso **não se aplica** aqui (tabela temporária de
-sessão, dentro de transação terminada em `ROLLBACK`), mas o teste ficou travado por um alerta legítimo do editor — sinal de que o caminho estava complicado demais.
+Level Security" por causa do `CREATE TEMP TABLE`. O aviso **não se aplica** aqui (tabela temporária de
+sessão, dentro de transação terminada em `ROLLBACK`, nunca exposta via PostgREST), mas o teste ficou
+travado por um alerta legítimo do editor — sinal de que o caminho estava complicado demais.
 
 ## Teste definitivo (v3) — sem tabela temporária, uma única grade
 
@@ -111,10 +115,19 @@ O mesmo resultado com **CTEs que modificam dados** (permitido no Postgres), sem 
 BEGIN;
 
 WITH n_o AS (SELECT count(*) AS total FROM public.oportunidades),
-     n_c AS (SELECT INTO _t202 SELECT 3, 'depois',   'oportunidades',     count(*) FROM public.oportunidades;
-INSERT INTO _t202 SELECT 3, 'depois',   'clientes_contatos', count(*) FROM public.clientes_contatos;
+     n_c AS (SELECT count(*) AS total FROM public.clientes_contatos),
+     t_o AS (SELECT id FROM public.oportunidades LIMIT 1),
+     t_c AS (SELECT id FROM public.clientes_contatos LIMIT 1),
+     del_o AS (DELETE FROM public.oportunidades
+                WHERE id IN (SELECT id FROM t_o) RETURNING 1),
+     del_c AS (DELETE FROM public.clientes_contatos
+                WHERE id IN (SELECT id FROM t_c) RETURNING 1)
+SELECT 'oportunidades' AS tabela, (SELECT total FROM n_o) AS antes,
+       (SELECT count(*) FROM del_o) AS apagadas
+UNION ALL
+SELECT 'clientes_contatos', (SELECT total FROM n_c),
+       (SELECT count(*) FROM del_c);
 
-SELECT etapa, tabela, qtd FROM _t202 ORDER BY ordem, tabela;
 ROLLBACK;
 ```
 
@@ -164,8 +177,8 @@ WHERE n.nspname = 'public' AND c.relkind = 'r'
   AND c.relname IN ('oportunidades','clientes','clientes_contatos',
                     'oportunidades_interacoes','oportunidades_documentos',
                     'oportunidades_linha_tempo','oportunidades_etapas',
-                    `oportunidades_checklist_itens`)
-  AND c.relname IN (...) ORDER BY c.relname;
+                    'oportunidades_checklist_itens')
+ORDER BY c.relname;
 ```
 
 Leitura esperada: `rodando_como = postgres`, `dono_da_tabela = postgres`,
