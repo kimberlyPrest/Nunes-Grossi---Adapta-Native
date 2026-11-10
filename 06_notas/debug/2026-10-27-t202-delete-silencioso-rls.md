@@ -96,7 +96,7 @@ WHERE schemaname = 'public' AND cmd = 'DELETE' ORDER BY tablename;
 
 ## Lição 2
 
-O SQL editor do Supabase exibe **somente o resultado da ÚLTIMA instrução**. Qualquer verificação precisa
+O SQL editor do Supabase **só renderiza o último result set** do script. Qualquer verificação precisa
 terminar numa única consulta consolidada (tabela temporária + um `SELECT` final), nunca em comparações
 espalhadas por vários `SELECT`.
 
