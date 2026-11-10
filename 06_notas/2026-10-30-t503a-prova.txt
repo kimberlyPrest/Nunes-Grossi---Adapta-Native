@@ -1,0 +1,56 @@
+aplicado: tronco + T5.01 + T5.02 + T5.02b
+T5.03a aplicada
+
+
+=== 1. Colunas de data criadas ===
+  PASS  data_ganho e data_perda existem                                obtido=["data_ganho","data_perda"]
+
+=== 2. Migracao dos dados legados (aprox. pela linha do tempo) ===
+  PASS  oportunidade perdida ganhou data_perda                         obtido=true
+  PASS  oportunidade ganha ganhou data_ganho                           obtido=true
+  PASS  data preenchida = hoje (data do registro)                      obtido=true
+  PASS  reaplicar nao altera (idempotente)                             obtido=true
+
+=== 3. Ganho: os 3 campos sao obrigatorios (regra 7) ===
+  PASS  sem seguradora recusa                                          obtido=true
+  PASS  sem valor recusa                                               obtido=true
+  PASS  valor zero recusa                                              obtido=true
+  PASS  sem numero da proposta recusa                                  obtido=true
+  PASS  seguradora inativa recusa                                      obtido=true
+  PASS  com os 3 campos, confirma                                      obtido=true
+  PASS  situacao = Ganha — em finalizacao                              obtido="Ganha — em finalização"
+  PASS  valor_fechado gravado                                          obtido=1500.5
+  PASS  numero_quiver gravado                                          obtido="PROP-1"
+  PASS  data_ganho = hoje                                              obtido="2026-10-30"
+
+=== 4. Perda: motivo E observacao obrigatorios (regra 9) ===
+  PASS  sem motivo recusa                                              obtido=true
+  PASS  sem observacao recusa                                          obtido=true
+  PASS  observacao em branco recusa                                    obtido=true
+  PASS  motivo que nao e de perda recusa                               obtido=true
+  PASS  com motivo + observacao, marca perda                           obtido=true
+  PASS  situacao = Perdida                                             obtido="Perdida"
+  PASS  observacao gravada com trim                                    obtido="Cliente escolheu concorrente"
+  PASS  data_perda = hoje                                              obtido="2026-10-30"
+  PASS  NENHUMA etapa fica atual (regra 9)                             obtido=null
+  PASS  a etapa em andamento voltou a pendente                         obtido="pendente"
+
+=== 5. Regra 8: ultima etapa de fluxo SEM etapa de ganho pede confirmacao ===
+  PASS  recusa fechar fluxo sem ganho confirmado                       obtido=true
+  PASS  depois do ganho, conclui a etapa                               obtido=true
+  PASS  depois do ganho confirmado, encerra                            obtido="Concluída"
+
+=== 6. Regressao: fluxo COM etapa de ganho continua igual ===
+  PASS  etapa de ganho conclui normalmente                             obtido=true
+  PASS  era_etapa_ganho sinalizado                                     obtido=true
+  PASS  situacao = Ganha — em finalizacao                              obtido="Ganha — em finalização"
+  PASS  data_ganho gravada pela etapa de ganho                         obtido=true
+
+=== 7. Regressao J6 real: ganho na 11, etapa 12 depois (nao encerra na 11) ===
+  PASS  etapa 11 (ganho) conclui e avanca                              obtido=true
+  PASS  oportunidade NAO encerra na 11                                 obtido="Ganha — em finalização"
+  PASS  etapa 12 virou atual                                           obtido="aaeb2cc3-b6cb-4518-942f-ce6c2ef572ed"
+  PASS  data_ganho gravada na 11                                       obtido=true
+  PASS  confirmar ganho nao encerra com etapa 12 pendente              obtido="Ganha — em finalização"
+
+RESULTADO: 37 PASS, 0 FAIL
