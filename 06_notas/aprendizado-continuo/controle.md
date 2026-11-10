@@ -10,3 +10,4 @@
 - 2026-10-30T19:57:00-03:00 · task T5.03a · capturado: 06_notas/aprendizado-continuo/AP-20261030-1957-encerrar-so-com-todas-etapas.md (condicao de fechamento deve ser 'todas concluidas', sem isentar a etapa atual; testar com a J6 real)
 - 2026-11-10T09:43:00-03:00 · task T5.03 · capturado:06_notas/aprendizado-continuo/AP-2026-11-10-0943-regra-em-rpc-nao-se-prova-com-update.md
 - 2026-11-10T12:19:00-03:00 · task T6.01 · capturado:06_notas/aprendizado-continuo/AP-2026-11-10-1219-volume-por-perfil.md
+- 2026-11-10T16:20:00-03:00 · task T4.02 · capturado:06_notas/aprendizado-continuo/AP-2026-11-10-1620-pglite-shims-supabase.md (cadeia completa de migrações no PGlite exige shims do ambiente Supabase: auth schema, uid/jwt, roles+GRANTs, storage, stubs de pgcrypto/unaccent)

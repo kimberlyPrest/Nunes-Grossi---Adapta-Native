@@ -68,10 +68,10 @@ as oportunidades abertas continuam iguais.
 
 ## Critérios de aceite
 
-- [ ] **CA-1-14:** Oportunidade Saúde PME 3–29 + SulAmérica nasce com as 12 etapas da J6, e a etapa 1 é atual com o responsável comercial (teste de aceite 4).
-- [ ] **CA-1-15:** Produto sem fluxo próprio usa o genérico, com aviso na ficha (teste de aceite 5).
-- [ ] **CA-1-16:** Protocolos não se repetem: 10 oportunidades criadas em sequência rápida têm 10 protocolos distintos e em ordem.
-- [ ] **CA-1-17:** Alterar o modelo J3 (via task de teste) não muda uma oportunidade J3 aberta antes da alteração.
+- [x] **CA-1-14:** Oportunidade Saúde PME 3–29 + SulAmérica nasce com as 12 etapas da J6, e a etapa 1 é atual com o responsável comercial (teste de aceite 4).
+- [x] **CA-1-15:** Produto sem fluxo próprio usa o genérico, com aviso na ficha (teste de aceite 5).
+- [x] **CA-1-16:** Protocolos não se repetem: 10 oportunidades criadas em sequência rápida têm 10 protocolos distintos e em ordem.
+- [x] **CA-1-17:** Alterar o modelo J3 (via task de teste) não muda uma oportunidade J3 aberta antes da alteração.
 - [ ] **CA-1-18:** A página Fluxos mostra para J6 e J3 exatamente o que Isabelle e Sheyla aprovaram.
 
 ## TDD da SPEC
@@ -90,8 +90,8 @@ as oportunidades abertas continuam iguais.
 
 | ID | Task | Dono | SPEC | Checklist/aceite | Recorte da prova | Status |
 |---|---|---|---|---|---|---|
-| T4.01 | Conferir e corrigir os modelos J6, J3 e genérico com os fluxos piloto e completar a página Fluxos (só consulta) | Maestro | SPEC-1-004 | Checklist item 1 | RED (divergências) → GREEN (página confere com os fluxos piloto) | ☐ |
-| T4.02 | Mover a abertura de oportunidade para uma operação única no banco (escolha do modelo, protocolo, cópia com versão, responsável, aviso do genérico) | Maestro | SPEC-1-004 | CA-1-14, CA-1-15, CA-1-16, CA-1-17 | GREEN + REGRESSÃO | ☐ |
+| T4.01 | Conferir e corrigir os modelos J6, J3 e genérico com os fluxos piloto e completar a página Fluxos (só consulta) | Maestro | SPEC-1-004 | Checklist item 1 | RED (divergências) → GREEN (página confere com os fluxos piloto) | ☑ 28/10 |
+| T4.02 | Mover a abertura de oportunidade para uma operação única no banco (escolha do modelo, protocolo, cópia com versão, responsável, aviso do genérico) | Maestro | SPEC-1-004 | CA-1-14, CA-1-15, CA-1-16, CA-1-17 | GREEN + REGRESSÃO | ☑ 10/11 (validação, sem código) |
 | T4.00 | Revisar J6 (Isabelle) e J3 (Sheyla) na página Configurações → Fluxos e devolver as anotações (depois das visões, antes do ensaio) | Isabelle, Sheyla | SPEC-1-004 | Checklist item 2 | Anotações recebidas | ☐ |
 | T4.03 | Aplicar nos modelos J6 e J3 a revisão de Isabelle e Sheyla e registrar nas Emendas | Maestro | SPEC-1-004 | CA-1-18 | GREEN (página confere com a revisão) | ☐ |
 
