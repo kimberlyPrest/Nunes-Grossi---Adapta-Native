@@ -1,0 +1,63 @@
+T6.02 — prova RED → GREEN (10/11/2026, 18:20)
+
+ARQUIVOS DA TASK
+  1. src/services/fluxos.ts   — getFluxoModelos: order('is_generico', ascending: true)
+  2. src/pages/Quadro.tsx     — carregamento em useCallback + estado de erro separado do vazio
+
+PROVA 1 — TELA (render real do Quadro.tsx em jsdom, services dublados)
+  Pipeline: esbuild bundle -> jsdom -> React 19 createRoot + act.
+  RED (Quadro publicado, sem as mudanças): 8 passaram / 4 falharam
+      ERRO-1..ERRO-4 falham: falha de carregamento continuava dizendo
+      "Nenhum modelo de fluxo ativo" e oferecendo "Ir para Fluxos".
+  GREEN (Quadro do disco):               12 passaram / 0 falharam
+      ERRO-1 tela diz "Não foi possível carregar o quadro"
+      ERRO-2 oferece "Tentar novamente"
+      ERRO-3 não diz que não há modelo ativo
+      ERRO-4 não oferece "Ir para Fluxos"
+      VAZIO-1..3 vazio de verdade inalterado (mensagem + "Ir para Fluxos")
+      ORD-1 genérico é o último da lista de modelos
+      ORD-2 Quadro abre no 1º modelo próprio, não no genérico
+      CARD-1..3 protocolo, coluna da etapa atual e dias na etapa
+
+PROVA 2 — SERVICE (src/services/fluxos.ts real contra cliente Supabase falso
+          que APLICA as cláusulas .order() sobre as 3 linhas reais de produção)
+  RED (versão publicada, is_generico DESC): 1 passou / 6 falharam
+      ordem devolvida: Fluxo Genérico, Saúde PME, Seguro Empresarial
+      Quadro abriria no Fluxo Genérico (0 oportunidades ativas) com 5 colunas
+  GREEN (versão do disco, is_generico ASC): 7 passaram / 0 falharam
+      ordem devolvida: Saúde PME, Seguro Empresarial, Fluxo Genérico
+      Quadro abre em Saúde PME (2 ativas, 12 colunas)
+
+PROVA 3 — AGRUPAMENTO NO BANCO (PGlite, cadeia real de 24 migrações):
+  8/8 — cada cartão na coluna da etapa atual em J6 (12), J3 (7) e genérico (5);
+        filtro por responsável; genérico por último.
+
+VERIFICAÇÕES DE BUILD
+  tsc --noEmit .......... exit 0
+  oxlint src ............ 71 warnings, 0 errors (= baseline do repositório)
+  vite build ............ OK — dist/assets/index-u88W8Kzc.js
+                          1.067.898 bytes, sha256 a8236d37bcec558c...
+  strings novas no bundle: "Não foi possível carregar o quadro" (1),
+                          "Ocorreu uma instabilidade ao buscar os modelos de fluxo" (1)
+                          "Ir para Fluxos" continua presente (vazio de verdade)
+
+LIMITAÇÃO REAL
+  CA-1-25 literal (quadro do J3) NÃO é testável hoje: nenhuma oportunidade do
+  modelo J3 está ativa em produção (as 8: 2 ativas em Saúde PME, 6 concluídas/perdidas).
+  Precisa abrir uma oportunidade J3 e avançar até uma etapa para ver o cartão.
+
+PUBLICAÇÃO (10/11 18:26)
+  Skip versão 0.0.57, commit 09505c4, publicado por skip_project_publish.
+  Produção: https://central-do-fluxo-comercial-ng-bf9f0.goskip.app
+            assets/index-DPpwRyoe.js — 1.020.186 bytes — sha256 b0d4438d…
+  Provas no bundle SERVIDO (não no de preview):
+    "Não foi possível carregar o quadro" ................. 1
+    "Ocorreu uma instabilidade ao buscar os modelos..." ... 1
+    "Nenhum modelo de fluxo ativo encontrado" ............ 1
+    "Ir para Fluxos" ..................................... 1 (vazio real preservado)
+    .order(`is_generico`,{ascending:!0}) ................. presente
+
+  CORREÇÃO DE REGISTRO: o src/services/fluxos.ts JÁ estava em produção desde
+  a versão 0.0.56 (ref 0d66112) — publicado fora deste ciclo. O bundle anterior
+  (index-DlaqEsVQ.js) já trazia order(is_generico, ascending:true). O que faltava
+  em produção era apenas o Quadro.tsx (a tela), publicado agora.
