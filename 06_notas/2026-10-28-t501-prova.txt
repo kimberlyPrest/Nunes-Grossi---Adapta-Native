@@ -1,0 +1,24 @@
+MIGRAÇÃO APLICADA
+
+=== 1. Itens legados migrados para oportunidades_documentos ===
+  PASS  o item legado ganhou 1 linha na tabela nova                        obtido=1
+  PASS  nome do arquivo preservado                                         obtido="cartao.pdf"
+  PASS  caminho preservado                                                 obtido="oportunidades/legado/cartao.pdf"
+  PASS  re-rodar a migração não duplica                                    obtido=1
+
+=== 2. CA-1-19 · Documento obrigatório bloqueia a conclusão ===
+  PASS  recusa com os 3 obrigatórios pendentes                             obtido=true
+  PASS  marcar o Documento como concluído NÃO libera (furo fechado)        obtido=true
+  PASS  arquivo_url sozinho NÃO conta mais                                 obtido=true
+  PASS  só o Documento pendente é o que trava agora                        obtido=true
+  PASS  com arquivo na tabela nova, a etapa conclui                        obtido=true
+
+=== 3. Regressão dos tipos Informação e Confirmação ===
+  PASS  Informação vazia e Confirmação não marcada ainda bloqueiam         obtido=true
+  PASS  sem Documento na etapa, conclui normalmente                        obtido=true
+
+=== 4. Origem inativa recusada na abertura (emenda T4.02) ===
+  PASS  origem inativa é recusada                                          obtido=true
+  PASS  origem ativa continua funcionando                                  obtido=true
+
+RESULTADO: 13 PASS, 0 FAIL

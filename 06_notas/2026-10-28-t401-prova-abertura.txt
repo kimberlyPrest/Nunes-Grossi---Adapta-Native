@@ -1,0 +1,54 @@
+MIGRAÇÃO APLICADA
+
+=== 1. CA-1-14 · Saúde PME + SulAmérica (J6) ===
+  PASS  escolheu o modelo J6                                             obtido="56899718-fc62-4a78-b938-b2d00f661834"
+  PASS  guardou a versão do modelo (3)                                   obtido=3
+  PASS  não usou o genérico                                              obtido=false
+  PASS  copiou 12 etapas                                                 obtido=12
+  PASS  etapa 1 em andamento                                             obtido="em_andamento"
+  PASS  etapa 1 com o responsável comercial                              obtido="909d90a6-3be6-485a-8530-7fbf60bbf193"
+  PASS  etapa 2 pendente                                                 obtido="pendente"
+  PASS  etapa 11 marcada como ganho                                      obtido=true
+  PASS  copiou os itens das 12 etapas                                    obtido=12
+  PASS  oportunidade.etapa_atual_id definido                             obtido=true
+
+=== 2. T4.01 · histórico "oportunidade criada" ===
+  PASS  gravou exatamente 1 registro de histórico                        obtido=1
+  PASS  tipo = criacao                                                   obtido="criacao"
+  PASS  título "Oportunidade criada"                                     obtido="Oportunidade criada"
+  PASS  autor do registro = quem criou                                   obtido="1a2e40d6-849b-4f93-a048-1173c9d9bd24"
+  PASS  descrição cita o fluxo e a versão                                obtido=true
+  PASS  metadados trazem o protocolo                                     obtido="NG-2026-000001"
+  PASS  metadados trazem a versão                                        obtido=3
+
+=== 3. T4.01 · notificação da etapa 1 ===
+  PASS  notificou o responsável da etapa 1                               obtido=1
+  PASS  destinatário é o comercial (não quem criou)                      obtido="909d90a6-3be6-485a-8530-7fbf60bbf193"
+  PASS  título cita o protocolo                                          obtido=true
+  PASS  link aponta para a ficha                                         obtido="/oportunidades/fac871ac-f1f0-4842-b962-958ee085c22c"
+  PASS  sem auto-notificação quando o criador é o responsável            obtido=0
+
+=== 4. CA-1-15 · produto sem fluxo → genérico + aviso ao admin ===
+  PASS  usou o fluxo genérico                                            obtido=true
+  PASS  modelo é o genérico                                              obtido="a3c5d26e-f197-4647-990c-7a0d9ed2bd3a"
+  PASS  avisou o administrador                                           obtido=1
+  PASS  aviso foi para o admin, não para o gestor criador                obtido="96d3792f-f4a2-41bc-9134-2bf376c8b48b"
+  PASS  não avisou o próprio criador                                     obtido=false
+
+=== 5. CA-1-16 · 10 protocolos em sequência ===
+  PASS  10 protocolos distintos                                          obtido=10
+  PASS  em ordem crescente (1 a 1)                                       obtido=true
+  PASS  formato NG-ANO-NNNNNN                                            obtido=true
+
+=== 6. CA-1-17 · snapshot imune a alteração do modelo ===
+  PASS  etapas da oportunidade antiga não mudaram                        obtido=true
+  PASS  versão da oportunidade antiga permanece 3                        obtido=3
+
+=== 7. Falha no meio: nada é criado ===
+  PASS  recusou produto inexistente                                      obtido=true
+  PASS  nenhuma oportunidade criada na falha                             obtido=13
+
+=== 8. Seguradora inativa recusada ===
+  PASS  recusou seguradora inativa                                       obtido=true
+
+RESULTADO: 35 PASS, 0 FAIL

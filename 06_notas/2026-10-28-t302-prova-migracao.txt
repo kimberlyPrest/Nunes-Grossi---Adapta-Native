@@ -1,0 +1,32 @@
+MIGRAÇÃO APLICADA
+
+=== 1. cliente_tem_oportunidade_em_andamento ===
+  PASS  cliente com oportunidade Em andamento                          obtido=true
+  PASS  cliente so com oportunidade Ganha                              obtido=false
+  PASS  cliente sem oportunidade                                       obtido=false
+  PASS  cliente so com Adiada (nao bloqueia)                           obtido=false
+  PASS  cliente inexistente                                            obtido=false
+
+=== 2. trigger: ativo -> arquivado ===
+  PASS  arquivar COM Em andamento -> recusado                          obtido=true
+  PASS  mensagem identifica o bloqueio                                 obtido=true
+  PASS  mensagem informa a quantidade                                  obtido=true
+  PASS  cliente continua ativo depois da recusa                        obtido="ativo"
+  PASS  arquivar SEM oportunidade -> ok                                obtido="arquivado"
+  PASS  arquivar SO COM Ganha -> ok                                    obtido="arquivado"
+  PASS  arquivar SO COM Adiada -> ok                                   obtido="arquivado"
+  PASS  reativar cliente com Em andamento -> ok                        obtido="ativo"
+  PASS  reativar cliente arquivado -> ok                               obtido="ativo"
+  PASS  editar razao social de cliente com Em andamento -> ok          obtido="RENOMEADO"
+  PASS  UPDATE ativo -> ativo nao e barrado                            obtido="ativo"
+
+=== 3. view clientes_arquivados_com_oportunidade_ativa ===
+  PASS  view lista exatamente 1 caso legado                            obtido=1
+  PASS  view aponta o cliente certo                                    obtido=true
+  PASS  view conta 1 oportunidade em andamento                         obtido=1
+
+=== 4. reversão ===
+  PASS  reversão remove as duas funcoes                                obtido=0
+  PASS  reversão remove o trigger                                      obtido=0
+
+RESULTADO: 21 PASS, 0 FAIL

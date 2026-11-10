@@ -1,0 +1,14 @@
+SQL REAL do repo aplicado (20261016235000)
+
+=== RED / CA-1-20 · dois usuarios da fila clicam "Assumir" ===
+  PASS  Alice assume (1a chamada)                                        obtido=true
+  PASS  responsavel = Alice                                              obtido=true
+
+  Bruno tentou assumir. Erro retornado: (NENHUM — passou!)
+  Responsavel final: BRUNO (Alice foi roubada!)
+  FAIL  Bruno recebe recusa "já assumida"                                obtido=false
+  FAIL  Responsavel continua sendo Alice                                 obtido=false
+  FAIL  linha do tempo tem 1 registro de assumir (nao 2)                 obtido=2
+
+RESULTADO RED: 2 PASS, 3 FAIL
+  → RED confirmado: o furo existe no SQL atual.
