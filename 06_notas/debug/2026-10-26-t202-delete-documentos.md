@@ -35,7 +35,6 @@ Após aplicar: a view `verificacao_regras_de_acesso` deve voltar **vazia** (0 li
 ## Gate
 
 `em_correcao` → nova migração publicada → volta a `aguardando_teste_humano` (repetir a consulta).
-
 ---
 
 ## Debug #2 (27/10) — arquivamento de cliente falha em silêncio para colaborador
