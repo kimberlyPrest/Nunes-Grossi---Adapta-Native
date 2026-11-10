@@ -54,22 +54,22 @@ avança, perda sempre tem motivo e tudo fica registrado na linha do tempo.
 
 ## Checklist de execução
 
-- [ ] Itens dos 3 tipos funcionando, com documento ligado ao item.
-- [ ] Bloqueio de obrigatórios no banco.
-- [ ] Concluir, voltar (com motivo) e assumir como operações únicas no banco.
-- [ ] Notificações para pessoa e fila; sino com marcar como lida.
-- [ ] Ganho na etapa de ganho, conclusão na última, perda com motivo.
-- [ ] Data do ganho e data da perda gravadas na oportunidade (campos próprios), com as oportunidades já ganhas ou perdidas preenchidas a partir da linha do tempo.
-- [ ] Histórico automático e linha do tempo completa.
-- [ ] Interações registradas.
+- [x] Itens dos 3 tipos funcionando, com documento ligado ao item.
+- [x] Bloqueio de obrigatórios no banco.
+- [x] Concluir, voltar (com motivo) e assumir como operações únicas no banco.
+- [x] Notificações para pessoa e fila; sino com marcar como lida.
+- [x] Ganho na etapa de ganho, conclusão na última, perda com motivo.
+- [x] Data do ganho e data da perda gravadas na oportunidade (campos próprios), com as oportunidades já ganhas ou perdidas preenchidas a partir da linha do tempo.
+- [x] Histórico automático e linha do tempo completa.
+- [ ] Interações registradas. *(implementadas no tronco; sem teste humano registrado — fica para o ensaio da T7)*
 
 ## Critérios de aceite
 
-- [ ] **CA-1-19:** A etapa “Documentação para implantação” da J6 não conclui sem o cartão CNPJ (teste de aceite 6).
-- [ ] **CA-1-20:** Ao concluir a etapa 11 (ganho) da J6, a etapa 12 cai na fila Saúde/Pós-venda com aviso no sino de quem é dessa fila; a pessoa assume e conclui (teste de aceite 8).
-- [ ] **CA-1-21:** Voltar etapa exige motivo, e ele aparece na linha do tempo (teste de aceite 9).
-- [ ] **CA-1-22:** Perda sem motivo não é aceita (teste de aceite 10); ganho exige seguradora, valor e nº da proposta; a oportunidade ganha mostra a data do ganho e a perdida, a data da perda.
-- [ ] **CA-1-23:** Uma J3 e uma J6 chegam a “Concluída”, e a linha do tempo mostra cada passo com pessoa e horário.
+- [x] **CA-1-19:** A etapa “Documentação para implantação” da J6 não conclui sem o cartão CNPJ (teste de aceite 6).
+- [x] **CA-1-20:** Ao concluir a etapa 11 (ganho) da J6, a etapa 12 cai na fila Saúde/Pós-venda com aviso no sino de quem é dessa fila; a pessoa assume e conclui (teste de aceite 8).
+- [x] **CA-1-21:** Voltar etapa exige motivo, e ele aparece na linha do tempo (teste de aceite 9).
+- [x] **CA-1-22:** Perda sem motivo não é aceita (teste de aceite 10); ganho exige seguradora, valor e nº da proposta; a oportunidade ganha mostra a data do ganho e a perdida, a data da perda.
+- [x] **CA-1-23:** Uma J3 e uma J6 chegam a “Concluída”, e a linha do tempo mostra cada passo com pessoa e horário.
 
 ## TDD da SPEC
 
@@ -87,10 +87,10 @@ avança, perda sempre tem motivo e tudo fica registrado na linha do tempo.
 
 | ID | Task | Dono | SPEC | Checklist/aceite | Recorte da prova | Status |
 |---|---|---|---|---|---|---|
-| T5.01 | Itens do checklist (3 tipos, documento ligado ao item) e bloqueio de obrigatórios no banco | Maestro | SPEC-1-005 | CA-1-19 | RED → GREEN do teste da etapa 6 | ☐ |
-| T5.02 | Concluir, voltar e assumir como operações no banco; passagem para pessoa ou fila; notificações e sino | Maestro | SPEC-1-005 | CA-1-20, CA-1-21 | GREEN da fila do pós-venda + teste do assumir duplicado | ☐ |
-| T5.03 | Etapa de ganho, conclusão, perda com motivo e arquivar; data do ganho e data da perda | Maestro | SPEC-1-005 | CA-1-22 | GREEN de ganho e perda, com as datas gravadas | ☐ |
-| T5.04 | Histórico automático, linha do tempo completa e interações | Maestro | SPEC-1-005 | CA-1-23 | REGRESSÃO: J3 e J6 até “Concluída” | ☐ |
+| T5.01 | Itens do checklist (3 tipos, documento ligado ao item) e bloqueio de obrigatórios no banco | Maestro | SPEC-1-005 | CA-1-19 | RED → GREEN do teste da etapa 6 | ☑ 30/10 |
+| T5.02 | Concluir, voltar e assumir como operações no banco; passagem para pessoa ou fila; notificações e sino | Maestro | SPEC-1-005 | CA-1-20, CA-1-21 | GREEN da fila do pós-venda + teste do assumir duplicado | ☑ 30/10 |
+| T5.03 | Etapa de ganho, conclusão, perda com motivo e arquivar; data do ganho e data da perda | Maestro | SPEC-1-005 | CA-1-22 | GREEN de ganho e perda, com as datas gravadas | ☑ 10/11 |
+| T5.04 | Histórico automático, linha do tempo completa e interações | Maestro | SPEC-1-005 | CA-1-23 | REGRESSÃO: J3 e J6 até “Concluída” | ☑ 10/11 |
 
 ## Emendas
 
