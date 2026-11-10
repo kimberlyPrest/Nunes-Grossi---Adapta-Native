@@ -114,8 +114,8 @@ painel completo e metas (Fase 3); e-mails (Fase 3); Quiver (Fase 4).
 ## Dependências e decisões
 
 D-01 (Vinícius), D-03 (visibilidade entre equipes), D-09 (revisão de J6 e J3), D-11 (quem faz a
-documentação e a digitação em Saúde), D-12 (dados de saúde). Acessos Skip, Maestro e GitHub já
-configurados em 05/10; projeto Supabase criado na conta da N&G.
+  documentação e a digitação em Saúde), D-12 (dados de saúde). Acessos Skip, Maestro e GitHub já
+  configurados em 05/10; projeto Supabase criado na conta da N&G.
 
 ## Definição de pronto
 
@@ -185,29 +185,29 @@ Legenda de status: ☐ a fazer · ◐ em andamento · ☑ concluída · ⛔ bloq
 
 | ID | Task | Dono | SPEC | Critério | Recorte da prova | Prazo | Status |
 |---|---|---|---|---|---|---|---|
-| T2.01 | Tela de usuários completa + 4 usuários de teste | Maestro | SPEC-1-002 | CA-1-08 | GREEN: teste do inativo | 26/10 | ☐ |
-| T2.02 | Regras de acesso em todas as tabelas e bloqueio de exclusões | Maestro | SPEC-1-002 | CA-1-06, 07, 09 | RED → GREEN | 26/10 | ☐ |
-| T2.03 | Pasta de documentos privada com regra por oportunidade | Maestro | SPEC-1-002 | CA-1-06 (documentos) | GREEN | 26/10 | ☐ |
-| T2.04 | Menus e rotas por perfil + tela “sem acesso” + regressão | Maestro | SPEC-1-002 | CA-1-05 | GREEN + REGRESSÃO | 26/10 | ☐ |
-| T3.01 | Validação e unicidade de CPF/CNPJ (tela + banco) | Maestro | SPEC-1-003 | CA-1-10, 11 | RED → GREEN | 27/10 | ☐ |
-| T3.02 | Ficha do cliente completa e arquivamento com regras | Maestro | SPEC-1-003 | CA-1-12, 13 | GREEN + REGRESSÃO | 27/10 | ☐ |
+| T2.01 | Tela de usuários completa + 4 usuários de teste | Maestro | SPEC-1-002 | CA-1-08 | GREEN: teste do inativo | 26/10 | ☑ 26/10 |
+| T2.02 | Regras de acesso em todas as tabelas e bloqueio de exclusões | Maestro | SPEC-1-002 | CA-1-06, 07, 09 | RED → GREEN | 26/10 | ☑ 27/10 |
+| T2.03 | Pasta de documentos privada com regra por oportunidade | Maestro | SPEC-1-002 | CA-1-06 (documentos) | GREEN | 26/10 | ☑ 27/10 |
+| T2.04 | Menus e rotas por perfil + tela “sem acesso” + regressão | Maestro | SPEC-1-002 | CA-1-05 | GREEN + REGRESSÃO | 26/10 | ☑ 28/10 |
+| T3.01 | Validação e unicidade de CPF/CNPJ (tela + banco) | Maestro | SPEC-1-003 | CA-1-10, 11 | RED → GREEN | 27/10 | ☑ 28/10 |
+| T3.02 | Ficha do cliente completa e arquivamento com regras | Maestro | SPEC-1-003 | CA-1-12, 13 | GREEN + REGRESSÃO | 27/10 | ☑ 28/10 |
 
 ### Leva 3 — Galhos: fluxos e movimento
 
 | ID | Task | Dono | SPEC | Critério | Recorte da prova | Prazo | Status |
 |---|---|---|---|---|---|---|---|
-| T4.01 | Conferir e corrigir J6, J3 e genérico com os fluxos piloto; completar a página Fluxos (só consulta) | Maestro | SPEC-1-004 | Conferência com os fluxos piloto | RED → GREEN | 27/10 | ☐ |
+| T4.01 | Conferir e corrigir J6, J3 e genérico com os fluxos piloto; completar a página Fluxos (só consulta) | Maestro | SPEC-1-004 | Conferência com os fluxos piloto | RED → GREEN | 27/10 | ☑ 28/10 |
 | T4.02 | Abertura de oportunidade como operação única no banco | Maestro | SPEC-1-004 | CA-1-14, 15, 16, 17 | GREEN + REGRESSÃO | 28/10 | ☐ |
-| T5.01 | Itens do checklist e bloqueio de obrigatórios no banco | Maestro | SPEC-1-005 | CA-1-19 | RED → GREEN | 28/10 | ☐ |
-| T5.02 | Concluir, voltar e assumir; passagem; notificações | Maestro | SPEC-1-005 | CA-1-20, 21 | GREEN | 28/10 | ☐ |
-| T5.03 | Ganho, conclusão, perda com motivo e arquivar; data do ganho e da perda | Maestro | SPEC-1-005 | CA-1-22 | GREEN | 29/10 | ☐ |
+| T5.01 | Itens do checklist e bloqueio de obrigatórios no banco | Maestro | SPEC-1-005 | CA-1-19 | RED → GREEN | 28/10 | ☑ 30/10 |
+| T5.02 | Concluir, voltar e assumir; passagem; notificações | Maestro | SPEC-1-005 | CA-1-20, 21 | GREEN | 28/10 | ☑ 30/10 |
+| T5.03 | Ganho, conclusão, perda com motivo e arquivar; data do ganho e da perda | Maestro | SPEC-1-005 | CA-1-22 | GREEN | 29/10 | ☑ 10/11 |
 | T5.04 | Histórico automático, linha do tempo e interações | Maestro | SPEC-1-005 | CA-1-23 | REGRESSÃO | 29/10 | ☐ |
 
 ### Leva 4 — Galhos: visões
 
 | ID | Task | Dono | SPEC | Critério | Recorte da prova | Prazo | Status |
 |---|---|---|---|---|---|---|---|
-| T6.01 | Minha fila e lista com busca, filtros e CSV | Maestro | SPEC-1-006 | CA-1-24, 26 | GREEN | 29/10 | ☐ |
+| T6.01 | Minha fila e lista com busca, filtros e CSV | Maestro | SPEC-1-006 | CA-1-24, 26 | GREEN | 29/10 | ☑ 10/11 |
 | T6.02 | Quadro por modelo de fluxo | Maestro | SPEC-1-006 | CA-1-25 | GREEN | 29/10 | ☐ |
 | T6.03 | Painel inicial com contas no banco | Maestro | SPEC-1-006 | CA-1-27 | GREEN + REGRESSÃO | 29/10 | ☐ |
 
