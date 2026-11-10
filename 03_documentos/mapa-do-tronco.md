@@ -168,3 +168,14 @@ ativo ou sem política).
 - A página **Configurações → Catálogo** não mostra a situação (ativa/inativa) de origens e motivos → SPEC-1-004 (T4.01).
 - Na conclusão de etapa, um item Documento marcado como concluído conta como preenchido mesmo sem arquivo;
   deve valer só "ao menos um arquivo" → SPEC-1-005 (T5.01).
+
+## Painel (T6.03)
+
+Contas do painel inicial feitas no banco pela função `painel_metricas(p_ano, p_mes, p_equipe_id)` (migração `20261110190000_t603_painel_metricas.sql`), chamada por `src/services/painel.ts`. SECURITY INVOKER: a RLS de quem chamou vale dentro da função, então o número respeita a SPEC-1-002 sem duplicar regra de acesso.
+
+- **Em andamento** = `situacao IN ('Em andamento','Ganha — em finalização')`; soma `valor_estimado`.
+- **Ganhas no mês** = por `data_ganho` (nunca `updated_at`); soma `COALESCE(valor_fechado, valor_estimado)` (legado anterior à T5.03 sem fechado).
+- **Perdidas no mês** = por `data_perda`; soma `valor_estimado`; motivos por `motivo_perda_id` → `motivos.nome`.
+- **Por etapa** agrupa por NOME da etapa (cada oportunidade clona a própria etapa; o id nunca agregaria). **Por responsável** por `responsavel_comercial_id` → `profiles`.
+- **Clique no número** abre `/oportunidades` com o filtro na URL: `pipeline=1` (em andamento), `ganhoDe`/`ganhoAte`, `perdaDe`/`perdaAte`, `etapa=<nome>`, `responsavel=<id>`, `motivoPerda=<id>`, `equipe=<id>`; a lista mostra a faixa "filtro do painel" com botão Limpar.
+- Sem teto de 1000 linhas: a função agrega no banco; a lista segue com o loop de paginação da T6.01.
