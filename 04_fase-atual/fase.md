@@ -197,7 +197,7 @@ Legenda de status: ☐ a fazer · ◐ em andamento · ☑ concluída · ⛔ bloq
 | ID | Task | Dono | SPEC | Critério | Recorte da prova | Prazo | Status |
 |---|---|---|---|---|---|---|---|
 | T4.01 | Conferir e corrigir J6, J3 e genérico com os fluxos piloto; completar a página Fluxos (só consulta) | Maestro | SPEC-1-004 | Conferência com os fluxos piloto | RED → GREEN | 27/10 | ☑ 28/10 |
-| T4.02 | Abertura de oportunidade como operação única no banco | Maestro | SPEC-1-004 | CA-1-14, 15, 16, 17 | GREEN + REGRESSÃO | 28/10 | ☐ |
+| T4.02 | Abertura de oportunidade como operação única no banco | Maestro | SPEC-1-004 | CA-1-14, 15, 16, 17 | GREEN + REGRESSÃO | 28/10 | ☑ 10/11 |
 | T5.01 | Itens do checklist e bloqueio de obrigatórios no banco | Maestro | SPEC-1-005 | CA-1-19 | RED → GREEN | 28/10 | ☑ 30/10 |
 | T5.02 | Concluir, voltar e assumir; passagem; notificações | Maestro | SPEC-1-005 | CA-1-20, 21 | GREEN | 28/10 | ☑ 30/10 |
 | T5.03 | Ganho, conclusão, perda com motivo e arquivar; data do ganho e da perda | Maestro | SPEC-1-005 | CA-1-22 | GREEN | 29/10 | ☑ 10/11 |
