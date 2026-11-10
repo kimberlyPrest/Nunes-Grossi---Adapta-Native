@@ -8,7 +8,8 @@ Depois que uma etapa é concluída, o checklist dela fica somente leitura e list
 anexados apenas pelo nome. Não existe botão nem link para baixar. O arquivo fica inalcançável
 pela interface, inclusive para administrador.
 
-Prints enviados mostram: "CHECKLIST REALIZADO NESTA ETAPA (SOMENTE LEITURA)" com `banner.png` sem ação, e a linha do tempo registrando "Arquivo banner.png anexado com sucesso".
+Prints enviados mostram: "CHECKLIST REALIZADO NESTA ETAPA (SOMENTE LEITURA)" com `banner.png`
+sem ação, e a linha do tempo registrando "Arquivo banner.png anexado com sucesso".
 
 ## Causa raiz
 
