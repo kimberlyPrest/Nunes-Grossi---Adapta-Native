@@ -46,20 +46,20 @@ carteira do Quiver na Fase 4.
 
 ## Checklist de execução
 
-- [ ] Documentos existentes normalizados; duplicados resolvidos.
-- [ ] Validação de dígitos na tela e no banco.
-- [ ] Unicidade pelo documento normalizado no banco.
-- [ ] Contato principal único.
-- [ ] Bloco de oportunidades na ficha, com abas abertas, ganhas e perdidas.
-- [ ] Arquivar/desarquivar com as regras acima.
-- [ ] Estados vazio, carregando e erro nas duas telas.
+- [x] Documentos existentes normalizados; duplicados resolvidos.
+- [x] Validação de dígitos na tela e no banco.
+- [x] Unicidade pelo documento normalizado no banco.
+- [x] Contato principal único.
+- [x] Bloco de oportunidades na ficha, com abas abertas, ganhas e perdidas.
+- [x] Arquivar/desarquivar com as regras acima.
+- [x] Estados vazio, carregando e erro nas duas telas.
 
 ## Critérios de aceite
 
-- [ ] **CA-1-10:** CPF ou CNPJ inválido é recusado (teste de aceite 2 da fase).
-- [ ] **CA-1-11:** Cadastrar de novo um documento existente, com ou sem pontuação, mostra o aviso e o link para o cadastro existente (teste de aceite 3).
-- [ ] **CA-1-12:** A ficha do cliente lista as oportunidades dele, separadas por situação, e só um contato fica como principal.
-- [ ] **CA-1-13:** Cliente com oportunidade em andamento não pode ser arquivado; cliente arquivado não aparece na Nova oportunidade.
+- [x] **CA-1-10:** CPF ou CNPJ inválido é recusado (teste de aceite 2 da fase).
+- [x] **CA-1-11:** Cadastrar de novo um documento existente, com ou sem pontuação, mostra o aviso e o link para o cadastro existente (teste de aceite 3).
+- [x] **CA-1-12:** A ficha do cliente lista as oportunidades dele, separadas por situação, e só um contato fica como principal.
+- [x] **CA-1-13:** Cliente com oportunidade em andamento não pode ser arquivado; cliente arquivado não aparece na Nova oportunidade.
 
 ## TDD da SPEC
 
@@ -77,8 +77,8 @@ carteira do Quiver na Fase 4.
 
 | ID | Task | Dono | SPEC | Checklist/aceite | Recorte da prova | Status |
 |---|---|---|---|---|---|---|
-| T3.01 | Normalizar documentos, validar dígitos e garantir a unicidade (tela + banco) | Maestro | SPEC-1-003 | CA-1-10, CA-1-11 | RED → GREEN dos dois cadastros | ☐ |
-| T3.02 | Completar a ficha do cliente (oportunidades por situação, contato principal, arquivar com regras, estados de tela) | Maestro | SPEC-1-003 | CA-1-12, CA-1-13 | GREEN + REGRESSÃO | ☐ |
+| T3.01 | Normalizar documentos, validar dígitos e garantir a unicidade (tela + banco) | Maestro | SPEC-1-003 | CA-1-10, CA-1-11 | RED → GREEN dos dois cadastros | ☑ 28/10 |
+| T3.02 | Completar a ficha do cliente (oportunidades por situação, contato principal, arquivar com regras, estados de tela) | Maestro | SPEC-1-003 | CA-1-12, CA-1-13 | GREEN + REGRESSÃO | ☑ 28/10 |
 
 ## Emendas
 
