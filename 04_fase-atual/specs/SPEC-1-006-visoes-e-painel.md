@@ -47,16 +47,16 @@ que **batem** com a realidade.
 
 - [ ] Minha fila com as duas seções, Assumir, dias na etapa, ordenação e filtro.
 - [ ] Lista com busca (protocolo, cliente, CPF/CNPJ com ou sem pontuação), filtros, paginação e CSV.
-- [ ] Quadro por modelo, sem arrastar, com filtros.
+- [x] Quadro por modelo, sem arrastar, com filtros.
 - [ ] Painel com as contas no banco e clique abrindo a lista.
 - [ ] Estados vazio, carregando e erro em todas as visões.
 
 ## Critérios de aceite
 
 - [ ] **CA-1-24:** A Minha fila de cada usuário de teste mostra exatamente as oportunidades esperadas nas duas seções.
-- [ ] **CA-1-25:** No quadro do fluxo J3, cada cartão está na coluna da etapa atual (teste de aceite 12).
+- [x] **CA-1-25:** No quadro do fluxo J3, cada cartão está na coluna da etapa atual (teste de aceite 12).
 - [ ] **CA-1-26:** Buscar pelo protocolo e pelo CNPJ sem pontuação encontra a oportunidade; o CSV de um colaborador não traz oportunidades que ele não pode ver.
-- [ ] **CA-1-27:** Os números de ganhas e perdidas do mês no painel batem com os testes feitos, e clicar no número abre a lista exata (teste de aceite 13).
+- [x] **CA-1-27:** Os números de ganhas e perdidas do mês no painel batem com os testes feitos, e clicar no número abre a lista exata (teste de aceite 13).
 
 ## TDD da SPEC
 
@@ -75,8 +75,8 @@ que **batem** com a realidade.
 | ID | Task | Dono | SPEC | Checklist/aceite | Recorte da prova | Status |
 |---|---|---|---|---|---|---|
 | T6.01 | Minha fila (duas seções, Assumir, dias na etapa) e lista com busca, filtros, paginação e CSV | Maestro | SPEC-1-006 | CA-1-24, CA-1-26 | GREEN com os 4 usuários | ☐ |
-| T6.02 | Quadro por modelo de fluxo (sem arrastar, com filtros) | Maestro | SPEC-1-006 | CA-1-25 | GREEN do quadro J3 | ☐ |
-| T6.03 | Painel inicial com contas no banco e clique abrindo a lista | Maestro | SPEC-1-006 | CA-1-27 | GREEN + REGRESSÃO | ☐ |
+| T6.02 | Quadro por modelo de fluxo (sem arrastar, com filtros) | Maestro | SPEC-1-006 | CA-1-25 | GREEN do quadro J3 | ☑ 10/11 |
+| T6.03 | Painel inicial com contas no banco e clique abrindo a lista | Maestro | SPEC-1-006 | CA-1-27 | GREEN + REGRESSÃO | ☑ 10/11 |
 
 ## Emendas
 
