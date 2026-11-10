@@ -208,8 +208,8 @@ Legenda de status: ☐ a fazer · ◐ em andamento · ☑ concluída · ⛔ bloq
 | ID | Task | Dono | SPEC | Critério | Recorte da prova | Prazo | Status |
 |---|---|---|---|---|---|---|---|
 | T6.01 | Minha fila e lista com busca, filtros e CSV | Maestro | SPEC-1-006 | CA-1-24, 26 | GREEN | 29/10 | ☑ 10/11 |
-| T6.02 | Quadro por modelo de fluxo | Maestro | SPEC-1-006 | CA-1-25 | GREEN | 29/10 | ☐ |
-| T6.03 | Painel inicial com contas no banco | Maestro | SPEC-1-006 | CA-1-27 | GREEN + REGRESSÃO | 29/10 | ☐ |
+| T6.02 | Quadro por modelo de fluxo | Maestro | SPEC-1-006 | CA-1-25 | GREEN | 29/10 | ☑ 10/11 |
+| T6.03 | Painel inicial com contas no banco | Maestro | SPEC-1-006 | CA-1-27 | GREEN + REGRESSÃO | 29/10 | ☑ 10/11 |
 
 ### Leva 4b — Revisão dos fluxos pela equipe
 
