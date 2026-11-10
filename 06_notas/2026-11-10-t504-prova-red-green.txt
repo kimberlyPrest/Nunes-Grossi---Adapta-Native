@@ -1,0 +1,70 @@
+T5.04 — prova RED→GREEN da migração 20261110170000_t504_historico_hibrido.sql
+
+Data: 10/11/2026 · Task: T5.04 · SPEC-1-005 (regra 10, CA-1-23) · Decisão D-24: opção C (híbrido)
+Método: cadeia completa de migrações em Postgres real (PGlite) — 24 do repositório + a nova,
+publicada no GitHub (commit 882c718) — com shims do ambiente Supabase (AP-2026-11-10-1620:
+auth.users completo, auth.uid/jwt, roles + GRANTs, storage, stubs gen_salt/crypt/unaccent).
+Sessão de usuário simulada com SET ROLE authenticated + request.jwt.claims. Abertura da
+oportunidade pela RPC real abrir_oportunidade.
+
+GREEN (com a migração publicada): 13 PASS, 0 FAIL
+RED (mesma prova sem a migração): 4 PASS, 9 FAIL — os 9 furos confirmados
+
+===== GREEN =====
+Cadeia aplicada: 25 migrações (24 do repo + T5.04)
+  PASS  abertura via RPC real criou oportunidade  obtido="2fe85244-7e53-4672-b3c0-a275a1bfe7d7"
+
+=== 1. Furo 1: desmarcar item concluído grava evento ===
+  PASS  desmarcar grava 1 evento checklist_item  obtido=1
+  PASS  evento cita o título do item  obtido="Item de checklist desmarcado: \"Origem do contato\""
+  PASS  autor do evento = quem desmarcou (auth.uid)  obtido="11111111-1111-1111-1111-111111111111"
+  PASS  metadados tem acao=desmarcado  obtido="desmarcado"
+
+=== 2. Furo 2: editar valor de item concluído grava evento ===
+  PASS  editar valor em item concluído grava 1 evento  obtido=1
+  PASS  descrição traz de/para  obtido="Item da etapa \"Lead\": valor era \"A\" e passou a \"B\"."
+
+=== 3. Sem duplicidade: marcar item (service) não gera evento do trigger ===
+  PASS  marcar item NÃO gera evento do trigger (só o desmarcar conta)  obtido=1
+
+=== 4. Furo 3: valor da oportunidade ===
+  PASS  mudar valor_estimado grava evento  obtido=1
+  PASS  descrição cita de/para  obtido="De 1000.00 para 2500.00"
+  PASS  UPDATE sem mudança real de valor NÃO grava evento
+  PASS  UPDATE de outra coluna não dispara o trigger
+
+=== 6. Reversão documentada funciona (simulação) ===
+  PASS  após reversão, mudar valor não grava mais evento
+
+RESULTADO: 13 PASS, 0 FAIL
+
+===== RED (sem a migração) =====
+Cadeia aplicada: 24 migrações (24 do repo + T5.04)
+  PASS  abertura via RPC real criou oportunidade  obtido="4dc45f9a-a8e8-4c61-8c85-f96fb7658dcb"
+
+=== 1. Furo 1: desmarcar item concluído grava evento ===
+  FAIL  desmarcar grava 1 evento checklist_item  obtido=0
+  FAIL  evento cita o título do item  obtido=undefined
+  FAIL  autor do evento = quem desmarcou (auth.uid)  obtido=undefined
+  FAIL  metadados tem acao=desmarcado  obtido=undefined
+
+=== 2. Furo 2: editar valor de item concluído grava evento ===
+  FAIL  editar valor em item concluído grava 1 evento  obtido=0
+  FAIL  descrição traz de/para  obtido=undefined
+
+=== 3. Sem duplicidade: marcar item (service) não gera evento do trigger ===
+  FAIL  marcar item NÃO gera evento do trigger (só o desmarcar conta)  obtido=0
+
+=== 4. Furo 3: valor da oportunidade ===
+  FAIL  mudar valor_estimado grava evento  obtido=0
+  FAIL  descrição cita de/para  obtido=undefined
+  PASS  UPDATE sem mudança real de valor NÃO grava evento
+  PASS  UPDATE de outra coluna não dispara o trigger
+
+=== 6. Reversão documentada funciona (simulação) ===
+  PASS  após reversão, mudar valor não grava mais evento
+
+RESULTADO: 4 PASS, 9 FAIL
+
+Leitura: os 3 furos da opção C existiam no banco real (RED) e a migração os fecha com autor,
+de/para e sem evento duplicado (GREEN). A reversão documentada foi simulada e funciona.

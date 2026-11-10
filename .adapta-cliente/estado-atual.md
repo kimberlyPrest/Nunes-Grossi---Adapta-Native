@@ -1,14 +1,15 @@
 # Estado atual — Adapta Cliente
 
-- task_id: nenhuma (T4.02 concluída por validação em 10/11; T6.02 analisada, aguardando autorização)
+- task_id: T5.04 (histórico automático, linha do tempo e interações)
 - champion: Viviane Grossi (executora dos testes: Louise Faraguti)
-- spec: 04_fase-atual/specs/SPEC-1-006-visoes-e-painel.md
-- etapa: aguardando_autorizacao (T6.02)
-- autorizacao_implementacao: ausente — relatório de análise da T6.02 entregue em 10/11; aguardando "pode implementar"
-- teste_humano: pendente (T4.02 não exigiu: nada foi implementado; produção inalterada, bundle index-DMKkV_Ia.js segue no ar)
-- verificacao_automatica: passou (T4.02) — 24 migrações reais aplicadas em PGlite; 13/13: CA-1-14 (12 etapas J6, etapa 1 atual, responsável comercial), CA-1-15 (genérico 5 etapas + aviso + 1 notificação ao admin), CA-1-16 (10 protocolos distintos/ordenados), CA-1-17 (cópia isolada), falha no meio → nada criado
-- aprendizado: capturado:06_notas/aprendizado-continuo/controle.md (triagem da T4.02)
-- ultima_acao: T4.02 marcada ☑ na fase e na SPEC-1-004; STATUS.md (25/35 = 71%) e changelog.md atualizados
-- proxima_acao: implementar a T6.02 quando o cliente autorizar
-- riscos_residuais: (1) sincronização do repositório de contexto no GitHub executada em 10/11 ~16:4x (STATUS/fase/changelog/notas publicados via API; ponteiro do submódulo do código continua em afe8fff — atualizar via git push com credencial ou pelo Skip); (2) T5.04 bloqueada pela D-24 (Kimberly); (3) quadro atual já cobre a maior parte da CA-1-25 (ver análise da T6.02)
-- atualizado_em: 2026-11-10T16:20:00-03:00
+- spec: 04_fase-atual/specs/SPEC-1-005-execucao-do-fluxo.md
+- etapa: aguardando_teste_humano
+- autorizacao_implementacao: confirmada — "a Kimberly aprovou a correção do bug que estava pendente dela decidir, siga com a implementação" (Pedro/owner, 10/11 ~16:05) + "D-24 confirmada — Opção C — híbrido" (formulário, 10/11 16:12)
+- teste_humano: pendente — depende do Skip aplicar a migração 20261110170000; roteiro entregue a Pedro
+- verificacao_automatica: passou — GREEN 13/13 em Postgres real (PGlite) com a cadeia completa de 25 migrações (24 do repo + a nova): desmarcar item grava evento com auth.uid(), editar valor de item concluído grava de/para, marcar item NÃO duplica, valor_estimado grava, UPDATE sem mudança real e de outra coluna não dispara, reversão documentada funciona; RED confirmado sem a migração: 9 FAIL nos mesmos casos
+- PUBLICADO: migração no repositório de código via API (commit 882c718, byte-idêntica ao disco e reprovada GREEN com o arquivo publicado); frontend sem mudança — produção segue servindo index-DMKkV_Ia.js. Falta o Skip aplicar a migração no banco.
+- aprendizado: pendente (triagem no fechamento da task)
+- ultima_acao: migração T5.04 escrita, provada (RED→GREEN) e publicada no repo de código; registros publicados no repositório de contexto
+- proxima_acao: Skip aplicar a migração (prompt entregue a Pedro) → teste humano da T5.04
+- riscos_residuais: (1) o teste humano depende do Skip aplicar a migração primeiro; (2) desmarcar Informação exige limpar o campo (texto vazio desmarca) — cobrir no roteiro; (3) valor da oportunidade não tem edição na tela — o trigger cobre chamada direta (regra 10); prova de tela não se aplica a esse furo
+- atualizado_em: 2026-11-10T16:45:00-03:00
