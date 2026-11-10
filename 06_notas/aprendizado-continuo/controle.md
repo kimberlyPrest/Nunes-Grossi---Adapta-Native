@@ -12,3 +12,13 @@
 - 2026-11-10T12:19:00-03:00 · task T6.01 · capturado:06_notas/aprendizado-continuo/AP-2026-11-10-1219-volume-por-perfil.md
 - 2026-11-10T16:20:00-03:00 · task T4.02 · capturado:06_notas/aprendizado-continuo/AP-2026-11-10-1620-pglite-shims-supabase.md (cadeia completa de migrações no PGlite exige shims do ambiente Supabase: auth schema, uid/jwt, roles+GRANTs, storage, stubs de pgcrypto/unaccent)
 - 2026-11-10T17:45:00-03:00 · task T5.04 · capturado:06_notas/aprendizado-continuo/AP-2026-11-10-1732-migracao-aplicada-via-mcp-supabase.md (migração DDL pura aplica direto via MCP apply_migration com prova list_migrations+pg_trigger+fumaça revertida; Skip só quando houver código novo)
+- 2026-11-10T18:30:00-03:00 · task T6.02 · capturado:06_notas/aprendizado-continuo/AP-2026-11-10-1830-bundle-de-producao-e-a-prova.md (prova de "está no ar" é o bundle servido com string de UI nova; working tree do Skip, espelho GitHub e .skip.config.json não provam)
+- 2026-11-10T18:31:00-03:00 · task T6.02 · capturado:06_notas/aprendizado-continuo/AP-2026-11-10-1831-provar-tela-com-render-real.md (mudança de comportamento de tela prova-se renderizando o componente publicado em jsdom com services dublados, e rodando a MESMA suíte contra o arquivo antigo para o RED)
+
+## AP-2026-11-10-1955 — T6.03 (painel)
+
+**Sinal**: em telas de agregado (painel/dashboard), calcular no banco via RPC `SECURITY INVOKER` em vez de varrer linhas no navegador — a RLS do chamador vale dentro da função, o número respeita a permissão sem duplicar regra, e o teto de 1000 linhas do PostgREST some porque a agregação é `count/sum` no servidor.
+**Evidência**: PGlite 19/19 com RLS comprovada por perfil; produção `painel_metricas(2026,10)` = 5 ganhas/R$ 10.572,50 · 2 perdidas · 3 em andamento, idêntico à contagem direta nas tabelas; prova jsdom do Painel antigo (RED) mostrava contas no cliente e teto de eventos.
+**Aplicação futura**: qualquer métrica/indicador de novo módulo nasce como função SQL SECURITY INVOKER + service fino chamando `rpc()`, nunca `useMemo` sobre lista completa.
+**Limites**: agrupar por NOME quando a entidade é clonada por linha (etapa por oportunidade — id não agrega); "voltar" de uma lista filtrada deve levar o contexto de origem na URL (ida: `painelAno/Mes/Equipe`; volta: `?ano&mes&equipe`), senão o usuário volta para o estado padrão e perde o que estava vendo.
+**Não reutilizável**: detalhes visuais do Painel, valores do cliente.
