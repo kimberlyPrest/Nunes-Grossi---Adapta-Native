@@ -6,7 +6,7 @@
 
 ---
 
-Você comercial de Saúde na N&G e é quem melhor conhece esta jornada no dia a dia. Antes de o sistema
+Você é comercial de Saúde na N&G e é quem melhor conhece esta jornada no dia a dia. Antes de o sistema
 entrar em uso de verdade, precisamos conferir se o fluxo que está lá é igual ao que vocês fazem.
 **Responder por e-mail é o caminho mais rápido:** não precisa de acesso ao sistema, nem de login,
 nem de abrir planilha.
