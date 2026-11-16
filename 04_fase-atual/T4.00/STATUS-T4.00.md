@@ -1,7 +1,7 @@
 # T4.00 — revisão dos fluxos: enviada, aguardando resposta
 
-**Status:** aguardando resposta de **Isabelle** (fluxo Saúde) e **Sheyla** (fluxo Empresarial)
-**Enviado em:** 16/11/2026 · **Prazo proposto:** 20/11/2026
+**Status:** **enviado** — aguardando resposta de **Isabelle** (fluxo Saúde) e **Sheyla** (fluxo Empresarial)
+**Enviado em:** 16/11/2026 às 14:02 · **Prazo proposto:** 20/11/2026 · **Cobrança:** 19/11 se não houver resposta
 **Dono da cobrança:** Pedro (owner) · **Dona da condução:** Louise
 
 ---
@@ -26,6 +26,16 @@ Fluxos com anotações bastam); o Maestro aplica"*. Então a revisão foi levada
 | **A — tela compartilhada** | Louise (Admin) abre e compartilha; elas ditam |
 | **B — print + resposta escrita** *(escolhido)* | Louise tira os prints; cada uma responde por escrito |
 | ~~C — promover a Administrador~~ | Descartado: Administrador vê todas as equipes e pode arquivar |
+
+## Como foi enviado
+
+**Por e-mail, em 16/11/2026 às 14:02**, pela conta corporativa, com o texto de `textos-de-envio.md`:
+
+- para a **Isabelle**: o PDF do próprio fluxo (J6) + os prints das telas do modelo no sistema;
+- para a **Sheyla**: o PDF do próprio fluxo (J3) + os prints das telas do modelo no sistema.
+
+Cada uma recebeu **só o seu fluxo**. Nenhuma das duas precisa de login ou acesso ao sistema para
+revisar.
 
 ## Material enviado
 
