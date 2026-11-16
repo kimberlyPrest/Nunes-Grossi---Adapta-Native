@@ -215,7 +215,7 @@ Legenda de status: ☐ a fazer · ◐ em andamento · ☑ concluída · ⛔ bloq
 
 | ID | Task | Dono | SPEC | Critério | Recorte da prova | Prazo | Status |
 |---|---|---|---|---|---|---|---|
-| T4.00 | Revisar J6 (Isabelle) e J3 (Sheyla) em Configurações → Fluxos | Isabelle, Sheyla | SPEC-1-004 | Anotações entregues | — | 29/10 | ◐ enviada 16/11, aguardando resposta |
+| T4.00 | Revisar J6 (Isabelle) e J3 (Sheyla) em Configurações → Fluxos | Isabelle, Sheyla | SPEC-1-004 | Anotações entregues | — | 29/10 | ◐ e-mail enviado 16/11 14:02 — aguardando resposta |
 | T4.03 | Aplicar a revisão de Isabelle e Sheyla nos modelos J6 e J3 | Maestro | SPEC-1-004 | CA-1-18 | GREEN | 30/10 | ☐ |
 
 ### Leva 5 — Ensaio real e aceite
